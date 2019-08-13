@@ -6,12 +6,6 @@ import IFrameDetail from './pages/IFrameDetail'
 import GeolocationDetail from './pages/GeolocationDetail'
 
 const App = () => {
-  console.log('Loading app')
-
-  useEffect(() => {
-    console.log('useEffect in app')
-  }, [])
-
   return (
     <Router basename={window.location.pathname}>
       <Route path="/" exact component={Summary} />
