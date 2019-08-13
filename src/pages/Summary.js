@@ -4,8 +4,8 @@ import MicroApp from '@workgrid/micro-app'
 const Summary = () => {
   const microapp = useRef(
     new MicroApp({
-      id: 'example-microapp',
-      audience: 'example-microapp'
+      id: 'edge-microapp',
+      audience: 'edge-microapp'
     })
   )
 
@@ -13,36 +13,24 @@ const Summary = () => {
     microapp.current.initialize()
   }, [])
 
-  const showDetail = () => {
+  const showDetail = detailPage => {
     // We have to use the hash router to show detail due to Github pages limitations
     microapp.current.showDetail({
-      url: `${window.location.origin}${window.location.pathname}#/detail`,
-      title: 'Microapp Title'
+      url: `${window.location.origin}${window.location.pathname}#/${detailPage}`,
+      title: 'Edge Microapp'
     })
-  }
-
-  const requestToken = async () => {
-    await microapp.current.getToken()
-  }
-
-  const changeTitle = () => {
-    const randomTitles = ['Altered Title', 'Awesome Title', 'Another Title']
-    microapp.current.updateTitle(randomTitles[Math.floor(Math.random() * randomTitles.length)])
   }
 
   return (
     <div>
-      <h1>Workgrid Microapp</h1>
-      <p>This is the summary microapp, here are the actions you can perform in summary:</p>
+      <h1>Edge Microapp</h1>
+      <p>This is the "edgy" microapp.</p>
       <div className="action-block vertical">
-        <button className="secondary" onClick={changeTitle}>
-          Change Title
+        <button className="secondary" onClick={() => showDetail('iframe')}>
+          Inner iFrame
         </button>
-        <button className="secondary" onClick={requestToken}>
-          Request Token
-        </button>
-        <button className="primary" onClick={showDetail}>
-          Show Detail
+        <button className="primary" onClick={() => showDetail('geolocation')}>
+          Geolocation
         </button>
       </div>
     </div>
