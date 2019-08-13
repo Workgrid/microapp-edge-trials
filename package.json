@@ -36,5 +36,5 @@
     "copyfiles": "^2.1.1",
     "rimraf": "^2.6.3"
   },
-  "homepage": "https://workgrid.github.io/microapp-kitchen-sink/"
+  "homepage": "https://workgrid.github.io/microapp-edge-trials/"
 }
