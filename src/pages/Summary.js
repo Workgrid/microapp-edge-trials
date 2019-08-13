@@ -4,12 +4,12 @@ import MicroApp from '@workgrid/micro-app'
 const Summary = () => {
   console.log('Loading summary ', MicroApp)
 
-  const microapp = useRef(
-    new MicroApp({
-      id: 'edge-microapp',
-      audience: 'edge-microapp'
-    })
-  )
+  // const microapp = useRef(
+  //   new MicroApp({
+  //     id: 'edge-microapp',
+  //     audience: 'edge-microapp'
+  //   })
+  // )
 
   useEffect(() => {
     console.log('Using effect')
