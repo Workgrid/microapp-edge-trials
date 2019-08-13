@@ -12,10 +12,6 @@ const Summary = () => {
   )
 
   useEffect(() => {
-    console.log('Using effect')
-  }, [])
-
-  useEffect(() => {
     console.log('Initializing ', microapp.current)
     microapp.current.initialize()
   }, [])
