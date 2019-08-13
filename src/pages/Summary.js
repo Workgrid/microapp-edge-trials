@@ -15,31 +15,23 @@ const Summary = () => {
     console.log('Using effect')
   }, [])
 
-  useEffect(() => {
-    console.log('Initializing ', microapp.current)
-    microapp.current.initialize()
-  }, [])
+  // useEffect(() => {
+  //   console.log('Initializing ', microapp.current)
+  //   microapp.current.initialize()
+  // }, [])
 
-  const showDetail = detailPage => {
-    // We have to use the hash router to show detail due to Github pages limitations
-    microapp.current.showDetail({
-      url: `${window.location.origin}${window.location.pathname}#/${detailPage}`,
-      title: 'Edge Microapp'
-    })
-  }
+  // const showDetail = detailPage => {
+  //   // We have to use the hash router to show detail due to Github pages limitations
+  //   microapp.current.showDetail({
+  //     url: `${window.location.origin}${window.location.pathname}#/${detailPage}`,
+  //     title: 'Edge Microapp'
+  //   })
+  // }
 
   return (
     <div>
       <h1>Edge Microapp</h1>
       <p>This is the "edgy" microapp.</p>
-      <div className="action-block vertical">
-        <button className="secondary" onClick={() => showDetail('iframe')}>
-          Inner iFrame
-        </button>
-        <button className="primary" onClick={() => showDetail('geolocation')}>
-          Geolocation
-        </button>
-      </div>
     </div>
   )
 }
