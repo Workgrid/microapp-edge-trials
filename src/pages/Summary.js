@@ -10,6 +10,7 @@ const Summary = () => {
   )
 
   useEffect(() => {
+    console.log('Initializing ', microapp.current)
     microapp.current.initialize()
   }, [])
 
