@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import MicroApp from '@workgrid/micro-app'
+import { ReactMic } from 'react-mic'
 import './detail.css'
 
 const Detail = () => {
@@ -36,11 +37,6 @@ const Detail = () => {
     }
   }
 
-  const getMicrophone = async () => {
-    await navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-    setIsMicOn(true)
-  }
-
   return (
     <div className="container">
       <h1>Feature Policy Detail</h1>
@@ -51,14 +47,18 @@ const Detail = () => {
         <p>GeoLocation is available: {JSON.stringify(isGeoAvailable)}</p>
         <pre>{locationData}</pre>
         <p>Media is available: {JSON.stringify(isMicAvailable)}</p>
-        <pre>{isMicOn ? 'recording' : 'not recording'}</pre>
+        <div className="mic-block">
+          <ReactMic className="mic-visual" record={isMicOn} strokeColor="black" backgroundColor="#f9f9f9" />
+          <div className="mic-icon" onClick={() => setIsMicOn(prev => !prev)}>
+            <span role="img" aria-label="mic">
+              🎙️
+            </span>
+          </div>
+        </div>
       </div>
       <div className="action-block">
         <button className="secondary" onClick={getLocationData}>
           Get Location
-        </button>
-        <button className="secondary" onClick={getMicrophone}>
-          Start Microphone
         </button>
       </div>
     </div>
