@@ -38,11 +38,10 @@ const Detail = () => {
 
   const getMicrophone = async () => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-      console.log('stream ', stream)
+      await navigator.mediaDevices.getUserMedia({ audio: true, video: false })
       setIsMicOn(true)
     } catch (err) {
-      console.error(err)
+      console.log(err)
     }
   }
 
