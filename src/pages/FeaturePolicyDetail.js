@@ -26,7 +26,7 @@ const Detail = () => {
       try {
         navigator.geolocation.getCurrentPosition(position => {
           console.log('Got location data ', position)
-          setLocationData(JSON.stringify(position, null, 2))
+          setLocationData(`lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`)
         })
       } catch (err) {
         console.log(err)
