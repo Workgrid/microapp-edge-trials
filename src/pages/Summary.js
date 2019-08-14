@@ -29,8 +29,8 @@ const Summary = () => {
         <button className="secondary" onClick={() => showDetail('iframe')}>
           Inner iFrame
         </button>
-        <button className="primary" onClick={() => showDetail('geolocation')}>
-          Geolocation
+        <button className="primary" onClick={() => showDetail('featurepolicy')}>
+          Feature Policy
         </button>
       </div>
     </div>
