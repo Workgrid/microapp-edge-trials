@@ -10,15 +10,17 @@ const Detail = () => {
     })
   )
 
-  const [isAvailable] = useState('geolocation' in navigator)
+  const [isGeoAvailable] = useState('geolocation' in navigator)
+  const [isMicAvailable] = useState(!!navigator.mediaDevices)
   const [locationData, setLocationData] = useState()
+  const [isMicOn, setIsMicOn] = useState(false)
 
   useEffect(() => {
     microapp.current.initialize()
   }, [])
 
   const getLocationData = () => {
-    if (isAvailable) {
+    if (isGeoAvailable) {
       console.log('Getting location data')
       try {
         navigator.geolocation.getCurrentPosition(position => {
@@ -34,19 +36,34 @@ const Detail = () => {
     }
   }
 
+  const getMicrophone = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+      console.log('stream ', stream)
+      setIsMicOn(true)
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
   return (
     <div className="container">
-      <h1>Geolocation Detail</h1>
+      <h1>Feature Policy Detail</h1>
       <p>
         This detail attempts to get location data. You must include the featurePolicy in the catalog entry for this app.
       </p>
       <div className="example-block">
-        <p>GeoLocation is available: {JSON.stringify(isAvailable)}</p>
+        <p>GeoLocation is available: {JSON.stringify(isGeoAvailable)}</p>
         <pre>{locationData}</pre>
+        <p>Media is available: {JSON.stringify(isMicAvailable)}</p>
+        <pre>{isMicOn ? 'recording' : 'not recording'}</pre>
       </div>
       <div className="action-block">
-        <button className="primary" onClick={getLocationData}>
+        <button className="secondary" onClick={getLocationData}>
           Get Location
+        </button>
+        <button className="secondary" onClick={getMicrophone}>
+          Start Microphone
         </button>
       </div>
     </div>
