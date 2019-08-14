@@ -13,7 +13,7 @@ const Detail = () => {
 
   const [isGeoAvailable] = useState('geolocation' in navigator)
   const [isMicAvailable] = useState(!!navigator.mediaDevices)
-  const [locationData, setLocationData] = useState()
+  const [locationData, setLocationData] = useState('Get location data >>')
   const [isMicOn, setIsMicOn] = useState(false)
 
   useEffect(() => {
