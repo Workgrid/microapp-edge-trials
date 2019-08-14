@@ -9,8 +9,17 @@
   align-items: center;
 }
 
-.mic-visual {
+.feature-block > *:first-child {
   flex: 1;
+}
+
+.geo-visual {
+  overflow: scroll;
+  padding: 15px 0;
+  background-color: #f9f9f9;
+}
+
+.mic-visual {
   width: calc(100% - 50px);
 }
 

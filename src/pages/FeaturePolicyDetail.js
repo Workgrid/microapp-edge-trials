@@ -22,14 +22,12 @@ const Detail = () => {
 
   const getLocationData = () => {
     if (isGeoAvailable) {
-      console.log('Getting location data')
+      setLocationData('Getting location data')
       try {
         navigator.geolocation.getCurrentPosition(position => {
-          console.log('Got location data ', position)
           setLocationData(`lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`)
         })
       } catch (err) {
-        console.log(err)
         setLocationData('Error fetching location data')
       }
     } else {
@@ -47,7 +45,7 @@ const Detail = () => {
         <p>GeoLocation is available: {JSON.stringify(isGeoAvailable)}</p>
         <div className="feature-block">
           <pre>{locationData}</pre>
-          <div tabIndex="0" className="feature-icon">
+          <div tabIndex="0" className="feature-icon" onClick={getLocationData}>
             <span role="img" aria-label="position">
               🧭
             </span>
@@ -62,11 +60,6 @@ const Detail = () => {
             </span>
           </div>
         </div>
-      </div>
-      <div className="action-block">
-        <button className="secondary" onClick={getLocationData}>
-          Get Location
-        </button>
       </div>
     </div>
   )
