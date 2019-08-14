@@ -12,6 +12,7 @@ const Summary = () => {
   )
 
   useEffect(() => {
+    console.log('Initalizing Workgrid in useEffect')
     microapp.current.initialize()
     setStatus('Initialized')
   }, [])
