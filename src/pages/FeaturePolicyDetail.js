@@ -45,11 +45,18 @@ const Detail = () => {
       </p>
       <div className="example-block">
         <p>GeoLocation is available: {JSON.stringify(isGeoAvailable)}</p>
-        <pre>{locationData}</pre>
+        <div className="feature-block">
+          <pre>{locationData}</pre>
+          <div tabIndex="0" className="feature-icon">
+            <span role="img" aria-label="position">
+              🧭
+            </span>
+          </div>
+        </div>
         <p>Media is available: {JSON.stringify(isMicAvailable)}</p>
-        <div className="mic-block">
+        <div className="feature-block">
           <ReactMic className="mic-visual" record={isMicOn} strokeColor="black" backgroundColor="#f9f9f9" />
-          <div className="mic-icon" onClick={() => setIsMicOn(prev => !prev)}>
+          <div tabIndex="1" className="feature-icon" onClick={() => setIsMicOn(prev => !prev)}>
             <span role="img" aria-label="mic">
               🎙️
             </span>

@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.mic-block {
+.feature-block {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,7 +14,8 @@
   width: calc(100% - 50px);
 }
 
-.mic-icon {
+.feature-icon {
+  cursor: pointer;
   font-size: 2em;
 }
 
