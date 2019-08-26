@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import MicroApp from '@workgrid/micro-app'
-import { ReactMic } from 'react-mic'
+// import { ReactMic } from 'react-mic'
 import './detail.css'
 
 const Detail = () => {
@@ -53,7 +53,7 @@ const Detail = () => {
         </div>
         <p>Media is available: {JSON.stringify(isMicAvailable)}</p>
         <div className="feature-block">
-          <ReactMic className="mic-visual" record={isMicOn} strokeColor="black" backgroundColor="#f9f9f9" />
+          {/* <ReactMic className="mic-visual" record={isMicOn} strokeColor="black" backgroundColor="#f9f9f9" /> */}
           <div tabIndex="1" className="feature-icon" onClick={() => setIsMicOn(prev => !prev)}>
             <span role="img" aria-label="mic">
               🎙️
