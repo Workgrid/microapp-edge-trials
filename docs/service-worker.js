@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/microapp-edge-trials/precache-manifest.4ca4215f0ec78a3e569f7eed2162ff2a.js"
+  "/microapp-edge-trials/precache-manifest.fb52353ae53d5a8deb9f519f63ad421f.js"
 );
 
 self.addEventListener('message', (event) => {

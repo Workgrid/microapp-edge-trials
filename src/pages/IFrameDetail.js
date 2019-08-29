@@ -23,7 +23,7 @@ const Detail = () => {
 
   useEffect(() => {
     if (currentCount <= 0) {
-      setIframeUrl('https://www.catapultsgame.com/app')
+      setIframeUrl('https://www.catapultsgame.com/app/')
       clearInterval(countdownTimer.current)
     }
   }, [currentCount])
