@@ -77,6 +77,10 @@ input {
   margin: 0 10px;
 }
 
+.section {
+  margin: 5px 10px;
+}
+
 .action-list {
   list-style: none;
   display: block;

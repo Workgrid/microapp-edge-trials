@@ -15,9 +15,13 @@ const Detail = () => {
   const countdownTimer = useRef()
 
   useEffect(() => {
+    console.log('Initializing Detail')
     microapp.current.initialize()
     countdownTimer.current = setInterval(() => {
-      setCurrentCount(prev => prev - 1)
+      setCurrentCount(prev => {
+        console.log(!!(prev % 2) ? 'Tick' : 'Tock')
+        return prev - 1
+      })
     }, 1000)
   }, [])
 
