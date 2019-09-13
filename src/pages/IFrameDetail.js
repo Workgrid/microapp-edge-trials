@@ -36,7 +36,7 @@ const Detail = () => {
     <div className="container">
       <h1>IFrame Detail</h1>
       <p>Tests an inner iFrame. This is a typical use case for "wrapping" an existing app in a MicroApp.</p>
-      <div className="exampleBlock">
+      <div className="example-block">
         <p>Showing iFrame in {currentCount}s</p>
         <iframe style={{ width: '100%', borderWidth: 1 }} title="Example Iframe" src={iframeUrl} />
       </div>

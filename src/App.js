@@ -3,14 +3,16 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Summary from './pages/Summary'
 import IFrameDetail from './pages/IFrameDetail'
-import FeaturePolicyDetail from './pages/FeaturePolicyDetail'
+// import FeaturePolicyDetail from './pages/FeaturePolicyDetail'
+import TestDetail from './pages/TestDetail'
 
 const App = () => {
   return (
     <Router basename={window.location.pathname}>
       <Route path="/" exact component={Summary} />
+      <Route path="/tests" component={TestDetail} />
       <Route path="/iframe" component={IFrameDetail} />
-      <Route path="/featurepolicy" component={FeaturePolicyDetail} />
+      {/* <Route path="/featurepolicy" component={FeaturePolicyDetail} /> */}
     </Router>
   )
 }
