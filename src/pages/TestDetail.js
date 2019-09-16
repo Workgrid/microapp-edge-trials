@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect } from 'react'
 import MicroApp from '@workgrid/micro-app'
 import './detail.css'
 import Tests from '../components/Tests'
