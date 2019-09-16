@@ -1,11 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { decode } from 'jsonwebtoken'
 
+const testTypes = ['Token', 'Title', 'Show', 'Hide']
+
 export default ({ microapp }) => {
-  const [tests, setTests] = useState([{ name: 'Token', result: false }])
+  const [tests, setTests] = useState(testTypes.map(testType => ({ name: testType, result: false })))
+  const testActions = useRef({})
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => testToken(), [microapp])
+
+  useEffect(() => {
+    testActions.current.Token = testToken
+    testActions.current.Title = testTitle
+    testActions.current.Show = testShow
+    testActions.current.Hide = testHide
+  })
+
+  const runTest = testName => () => {
+    testActions.current[testName]()
+  }
 
   const updateTest = (name, update) => {
     setTests(prevTests => {
@@ -37,6 +51,24 @@ export default ({ microapp }) => {
     }, 1000)
   }
 
+  const testTitle = () => {
+    updateTest('Title', { result: false })
+    microapp.updateTitle(`Title Change: ${Math.floor(Math.random() * 500)}`)
+    updateTest('Title', { result: true })
+  }
+
+  const testShow = () => {
+    updateTest('Show', { result: false })
+    microapp.showDetail({ url: `${window.location.origin}${window.location.pathname}#/tests` })
+    updateTest('Show', { result: true })
+  }
+
+  const testHide = () => {
+    updateTest('Hide', { result: false })
+    microapp.hideDetail()
+    updateTest('Hide', { result: true })
+  }
+
   return (
     <>
       <strong>Tests:</strong>
@@ -53,8 +85,8 @@ export default ({ microapp }) => {
           )}
           <div className="item">{test.name}</div>
           <div className="item">
-            <button className="action-small" onClick={testToken}>
-              Retry
+            <button className="action-small" onClick={runTest(test.name)}>
+              Run
             </button>
           </div>
         </div>
