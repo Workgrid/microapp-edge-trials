@@ -4,7 +4,7 @@
 }
 
 .checklist .pass {
-  flex: 0;
+  flex: 0 0 1.3em;
 }
 
 .checklist .item {
