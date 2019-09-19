@@ -8,7 +8,7 @@ import TestDetail from './pages/TestDetail'
 
 const App = () => {
   useEffect(() => {
-    localStorage.setItem('debug', '*')
+    localStorage.setItem('debug', 'courier:edge-microapp')
   }, [])
 
   return (
