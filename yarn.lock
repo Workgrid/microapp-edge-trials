@@ -1501,10 +1501,10 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@workgrid/courier@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.6.0.tgz#fd3d3192890c1f5fcc46e01f8b7e0ac072f946f0"
-  integrity sha512-+gfGATbk6FEHdcaapu8DkIc7AWSU5n2dYMkOa26OL4p7HxFu3bmv5MoC4TvBg4VxZ3q0rQejYAZpN9BIl7A1rA==
+"@workgrid/courier@0.0.0-f053dcc":
+  version "0.0.0-f053dcc"
+  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.0.0-f053dcc.tgz#81280ed54b7c5e1adf41cd4ba4e98acb91dd0b10"
+  integrity sha512-1x6gRjbpL6a0hQsg6gSU8pujUk0Ap8icjLM0trFe8NqEjqkWsYvdWU2VDtTN/K/RStK2/wJompaBFaxwpjak5w==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@types/debug" "^4.1.5"
@@ -1517,19 +1517,21 @@
     nice-try "^2.0.0"
     uuid "^3.3.2"
 
-"@workgrid/micro-app@^0.7.4":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.8.1.tgz#787068cd51774bd65d8c6a97a163f72aa4596101"
-  integrity sha512-f1xFiER+Ao0j5i+vKwLkzQ1aaQcijD9GptH1SkUTcbElfagtr9atUefPTIdVDowVstfEKTxIJMjSBZxjZBq3zw==
+"@workgrid/micro-app@0.0.0-f053dcc":
+  version "0.0.0-f053dcc"
+  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.0.0-f053dcc.tgz#52fd3676a86a47f3e5a78c0b20516c00b009826e"
+  integrity sha512-vhWosRD7EpoD7+efUfWHNqNU7jfXyLcFo2abtPpJbaLmpgucUwiFeay/qtEKZFk2FU1B9QmSZWT34MP43EeixQ==
   dependencies:
     "@types/jwt-decode" "^2.2.1"
     "@types/lodash" "^4.14.137"
     "@types/ms" "^0.7.30"
-    "@workgrid/courier" "^0.6.0"
+    "@workgrid/courier" "0.0.0-f053dcc"
+    core-js "^3.2.1"
     jwt-decode "^2.2.0"
     lodash "^4.17.11"
     ms "^2.1.1"
     p-any "^2.1.0"
+    regenerator-runtime "^0.13.3"
     resize-observer-polyfill "^1.5.1"
 
 "@xtuc/ieee754@^1.2.0":
@@ -2840,6 +2842,11 @@ core-js@^2.4.0:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.9.tgz#6b4b214620c834152e179323727fc19741b084f2"
   integrity sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A==
+
+core-js@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
+  integrity sha512-Qa5XSVefSVPRxy2XfUC13WbvqkxhkwB3ve+pgCQveNgYzbM/UxZeu1dcOX/xr4UmfUd+muuvsaxilQzCyUurMw==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -8495,7 +8502,7 @@ regenerate@^1.4.0:
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
   integrity sha512-1G6jJVDWrt0rK99kBjvEtziZNCICAuvIPkSiUFIQxVP06RCVpq3dmDo2oi6ABpYaDYaTRr67BEhL8r1wgEZZKg==
 
-regenerator-runtime@0.13.3, regenerator-runtime@^0.13.2:
+regenerator-runtime@0.13.3, regenerator-runtime@^0.13.2, regenerator-runtime@^0.13.3:
   version "0.13.3"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
   integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==

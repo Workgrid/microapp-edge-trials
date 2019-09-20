@@ -4,7 +4,7 @@ import { decode } from 'jsonwebtoken'
 const testTypes = ['Token', 'Title', 'Show', 'Hide']
 
 export default ({ microapp }) => {
-  const [tests, setTests] = useState(testTypes.map(testType => ({ name: testType, result: false })))
+  const [tests, setTests] = useState(testTypes.map(testType => ({ name: testType, loading: false, result: false })))
   const testActions = useRef({})
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -36,7 +36,7 @@ export default ({ microapp }) => {
   const testToken = () => {
     if (!microapp) return
 
-    updateTest('Token', { result: false })
+    updateTest('Token', { loading: true, result: false })
     // Arbitrarily add a "loading time" other wise you are kind of "did it work?"
     setTimeout(async () => {
       const token = await microapp.getToken()
@@ -44,11 +44,12 @@ export default ({ microapp }) => {
       const decodedToken = decode(token)
       // TODO alter this verification when this app is upgraded to the more secure token
       if (decodedToken.aud === process.env.REACT_APP_AUD) {
-        updateTest('Token', { result: true })
+        updateTest('Token', { loading: false, result: true })
       } else {
+        updateTest('Token', { loading: false, result: false })
         console.warn(`Invalid token: ${decodedToken.aud} !== ${process.env.REACT_APP_AUD}`)
       }
-    }, 1000)
+    }, 500)
   }
 
   const testTitle = () => {
@@ -74,14 +75,22 @@ export default ({ microapp }) => {
       <strong>Tests:</strong>
       {tests.map(test => (
         <div className="checklist" key={test.name}>
-          {test.result ? (
-            <span aria-label="pass" role="img" className="pass">
-              ✅
+          {test.loading ? (
+            <span aria-label="loading" role="img" className="pass">
+              🤔
             </span>
           ) : (
-            <span aria-label="fail" role="img" className="pass">
-              ❌
-            </span>
+            <>
+              {test.result ? (
+                <span aria-label="pass" role="img" className="pass">
+                  ✅
+                </span>
+              ) : (
+                <span aria-label="fail" role="img" className="pass">
+                  ❌
+                </span>
+              )}
+            </>
           )}
           <div className="item">{test.name}</div>
           <div className="item">

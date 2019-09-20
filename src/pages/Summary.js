@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import Tests from '../components/Tests'
 import MicroApp from '@workgrid/micro-app'
+import Debugger from '../components/Debugger'
 import './summary.css'
 
 const Summary = () => {
@@ -34,15 +35,13 @@ const Summary = () => {
         <Tests microapp={microapp.current} />
       </section>
       <div className="action-block vertical">
+        <Debugger />
         <button className="secondary" onClick={() => showDetail('iframe')}>
           Inner iFrame
         </button>
         <button className="primary" onClick={() => showDetail('tests')}>
           Detail Tests
         </button>
-        {/* <button className="primary" onClick={() => showDetail('featurepolicy')}>
-          Feature Policy
-        </button> */}
       </div>
     </div>
   )
