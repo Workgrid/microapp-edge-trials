@@ -6,8 +6,8 @@
     "@workgrid/micro-app": "^0.7.4",
     "core-js-pure": "^3.1.4",
     "jsonwebtoken": "^8.5.1",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-mic": "^12.4.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1"
