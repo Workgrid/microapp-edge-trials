@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 export default () => {
-  const [debuggerEnabled, setDebuggerEnabled] = useState(localStorage.getItem('debug') === '*')
+  const [debuggerEnabled, setDebuggerEnabled] = useState(localStorage.getItem('debug') === 'courier:*')
 
   useEffect(() => {
-    localStorage.setItem('debug', debuggerEnabled ? '*' : 'nothing')
+    localStorage.setItem('debug', debuggerEnabled ? 'courier:*' : 'nothing')
   }, [debuggerEnabled])
 
   return (
