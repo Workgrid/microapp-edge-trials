@@ -8,8 +8,13 @@ export default () => {
   }, [debuggerEnabled])
 
   return (
-    <button className="primary" onClick={() => setDebuggerEnabled(!debuggerEnabled)}>
-      {debuggerEnabled ? 'Disable' : 'Enable'} Debug
-    </button>
+    <>
+      <button className="secondary" onClick={() => setDebuggerEnabled(!debuggerEnabled)}>
+        {debuggerEnabled ? 'Disable' : 'Enable'} Debug
+      </button>
+      <button className="secondary" onClick={() => window.location.reload(true)}>
+        Refresh
+      </button>
+    </>
   )
 }
