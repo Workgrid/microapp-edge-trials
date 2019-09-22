@@ -7,7 +7,7 @@ import './summary.css'
 const Summary = () => {
   const microapp = useRef(
     new MicroApp({
-      id: 'edge-microapp',
+      id: 'edge-microapp-local',
       audience: 'edge-microapp'
     })
   )
@@ -15,6 +15,7 @@ const Summary = () => {
   useEffect(() => {
     console.log('Initialize')
     microapp.current.initialize()
+    console.log('Post initialize')
   }, [])
 
   const showDetail = detailPage => {
