@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7795a55b6a403e03d891d88b6e34ead",
+    "revision": "a3a71f23f44feb344229361939f850bb",
     "url": "/microapp-edge-trials/index.html"
   },
   {
-    "revision": "4ca1df898d71c0fcaa79",
+    "revision": "ce8c0d2ab96110d86f7d",
     "url": "/microapp-edge-trials/static/css/main.431b9690.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/microapp-edge-trials/static/js/2.f2db64aa.chunk.js"
   },
   {
-    "revision": "4ca1df898d71c0fcaa79",
-    "url": "/microapp-edge-trials/static/js/main.375605bf.chunk.js"
+    "revision": "ce8c0d2ab96110d86f7d",
+    "url": "/microapp-edge-trials/static/js/main.a3d26288.chunk.js"
   },
   {
     "revision": "1345b1a7176ff95a9410",

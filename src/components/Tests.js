@@ -1,10 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { decode } from 'jsonwebtoken'
 
-const testTypes = ['Token', 'Title', 'Show', 'Hide']
+const testTypes = [
+  { name: 'Token' },
+  { name: 'Title' },
+  { name: 'Show', inDetail: false },
+  { name: 'Hide', inSummary: false }
+]
 
-export default ({ microapp }) => {
-  const [tests, setTests] = useState(testTypes.map(testType => ({ name: testType, loading: false, result: false })))
+export default ({ microapp, panel = 'summary' }) => {
+  const [tests, setTests] = useState(
+    testTypes.map(testType => ({ inSummary: true, inDetail: true, loading: false, result: false, ...testType }))
+  )
   const testActions = useRef({})
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -73,33 +80,35 @@ export default ({ microapp }) => {
   return (
     <>
       <strong>Tests:</strong>
-      {tests.map(test => (
-        <div className="checklist" key={test.name}>
-          {test.loading ? (
-            <span aria-label="loading" role="img" className="pass">
-              🤔
-            </span>
-          ) : (
-            <>
-              {test.result ? (
-                <span aria-label="pass" role="img" className="pass">
-                  ✅
-                </span>
-              ) : (
-                <span aria-label="fail" role="img" className="pass">
-                  ❌
-                </span>
-              )}
-            </>
-          )}
-          <div className="item">{test.name}</div>
-          <div className="item">
-            <button className="action-small" onClick={runTest(test.name)}>
-              Run
-            </button>
+      {tests
+        .filter(test => (panel === 'summary' && test.inSummary) || (panel === 'detail' && test.inDetail))
+        .map(test => (
+          <div className="checklist" key={test.name}>
+            {test.loading ? (
+              <span aria-label="loading" role="img" className="pass">
+                🤔
+              </span>
+            ) : (
+              <>
+                {test.result ? (
+                  <span aria-label="pass" role="img" className="pass">
+                    ✅
+                  </span>
+                ) : (
+                  <span aria-label="fail" role="img" className="pass">
+                    ❌
+                  </span>
+                )}
+              </>
+            )}
+            <div className="item">{test.name}</div>
+            <div className="item">
+              <button className="action-small" onClick={runTest(test.name)}>
+                Run
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </>
   )
 }

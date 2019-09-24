@@ -33,7 +33,7 @@ const Summary = () => {
       <p>This is the "edgy" microapp.</p>
       <section className="section">
         <input type="text" placeholder="Input Test"></input>
-        <Tests microapp={microapp.current} />
+        <Tests microapp={microapp.current} panel="summary" />
       </section>
       <div className="action-block vertical">
         <Debugger />
