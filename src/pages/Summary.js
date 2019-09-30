@@ -32,8 +32,8 @@ const Summary = () => {
       </section>
       <div className="action-block vertical">
         <Debugger />
-        <button className="primary" onClick={() => showDetail('tests')}>
-          Detail Tests
+        <button className="primary" onClick={() => showDetail('featurepolicy')}>
+          Feature Policy
         </button>
       </div>
     </div>

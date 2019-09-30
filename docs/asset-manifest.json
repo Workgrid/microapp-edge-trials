@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/microapp-edge-trials/static/css/main.495ab153.chunk.css",
-    "main.js": "/microapp-edge-trials/static/js/main.ad3dae99.chunk.js",
-    "main.js.map": "/microapp-edge-trials/static/js/main.ad3dae99.chunk.js.map",
+    "main.js": "/microapp-edge-trials/static/js/main.73e369c8.chunk.js",
+    "main.js.map": "/microapp-edge-trials/static/js/main.73e369c8.chunk.js.map",
     "runtime~main.js": "/microapp-edge-trials/static/js/runtime~main.25912731.js",
     "runtime~main.js.map": "/microapp-edge-trials/static/js/runtime~main.25912731.js.map",
     "static/js/2.a534157f.chunk.js": "/microapp-edge-trials/static/js/2.a534157f.chunk.js",
     "static/js/2.a534157f.chunk.js.map": "/microapp-edge-trials/static/js/2.a534157f.chunk.js.map",
     "index.html": "/microapp-edge-trials/index.html",
-    "precache-manifest.59351478e4a21cbbe5bfb5c3ab7529b1.js": "/microapp-edge-trials/precache-manifest.59351478e4a21cbbe5bfb5c3ab7529b1.js",
+    "precache-manifest.578ab80bc187b009660317fc814974f7.js": "/microapp-edge-trials/precache-manifest.578ab80bc187b009660317fc814974f7.js",
     "service-worker.js": "/microapp-edge-trials/service-worker.js",
     "static/css/main.495ab153.chunk.css.map": "/microapp-edge-trials/static/css/main.495ab153.chunk.css.map"
   }
