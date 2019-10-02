@@ -3,6 +3,8 @@ import MicroApp from '@workgrid/micro-app'
 import Debugger from '../components/Debugger'
 import './summary.css'
 
+import { version } from '../../package.json'
+
 const Summary = () => {
   const microapp = useRef(
     new MicroApp({
@@ -26,7 +28,7 @@ const Summary = () => {
   return (
     <div>
       <h1>Edge Microapp</h1>
-      <p>This is the "edgy" microapp.</p>
+      <p>This is the "edgy" microapp v{version}</p>
       <section className="section">
         <input type="text" placeholder="Input Test"></input>
       </section>
