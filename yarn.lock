@@ -1496,10 +1496,10 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@workgrid/courier@0.0.0-bdf80d3":
-  version "0.0.0-bdf80d3"
-  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.0.0-bdf80d3.tgz#5900af59e4f53ad528fe769ea4dcc0ead16c7f55"
-  integrity sha512-IyV/NsOfKghdhJzfoB0O3ruZwGhvrq57nuFx4OEryUZd/kUaRMJbw1/+qFb3V4Sy2gz651KL7i6Hh9Ui/5C6FQ==
+"@workgrid/courier@0.0.0-05b65cd":
+  version "0.0.0-05b65cd"
+  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.0.0-05b65cd.tgz#6be886affc07a48ea3f31930c84c6881e3b1283f"
+  integrity sha512-iGVZkVp3Qo+Fj3tp2cQ9bBEYjssU2DtcSRtHBNL1RbhX5y3hNmhIiVk69rlu/1AOUQUplNmi/I2I8GV77ZhkLQ==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@types/debug" "^4.1.5"
@@ -1512,12 +1512,12 @@
     nice-try "^2.0.0"
     uuid "^3.3.2"
 
-"@workgrid/micro-app@0.0.0-bdf80d3":
-  version "0.0.0-bdf80d3"
-  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.0.0-bdf80d3.tgz#e8ba1311b51430bf25add0a558c2c733e933d2b5"
-  integrity sha512-UUXods3Swdo5DFiWjDsNaM1+uhngFaHTidiWe2mpuBRFMSTdPDf61eqsVsFzxQjzdk8m7a/fTGaQgv2Ns9OKEg==
+"@workgrid/micro-app@0.0.0-05b65cd":
+  version "0.0.0-05b65cd"
+  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.0.0-05b65cd.tgz#4132355db8d8656bd872c2637056400e7a72ab64"
+  integrity sha512-ULrAU3hxrXwrRKUKaT/ulUWe9U70KVs2qI9nx75YtMuuuNSGlYc9NOyftWiY/nJ8jgq31oUMFav2NVJRLpT4wA==
   dependencies:
-    "@workgrid/courier" "0.0.0-bdf80d3"
+    "@workgrid/courier" "0.0.0-05b65cd"
     bluebird "^3.7.0"
     core-js "^3.2.1"
     jwt-decode "^2.2.0"

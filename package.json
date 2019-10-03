@@ -1,9 +1,9 @@
 {
   "name": "@workgrid/microapp-edge-trials",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "dependencies": {
-    "@workgrid/micro-app": "0.0.0-bdf80d3",
+    "@workgrid/micro-app": "0.0.0-05b65cd",
     "core-js-pure": "^3.1.4",
     "jsonwebtoken": "^8.5.1",
     "react": "16.8.6",
