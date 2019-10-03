@@ -1268,17 +1268,12 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
 
-"@types/jwt-decode@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@types/jwt-decode/-/jwt-decode-2.2.1.tgz#afdf5c527fcfccbd4009b5fd02d1e18241f2d2f2"
-  integrity sha512-aWw2YTtAdT7CskFyxEX2K21/zSDStuf/ikI3yBqmwpwJF0pS+/IX5DWv+1UFffZIbruP6cnT9/LAJV1gFwAT1A==
+"@types/lodash@^4.14.139":
+  version "4.14.141"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.141.tgz#d81f4d0c562abe28713406b571ffb27692a82ae6"
+  integrity sha512-v5NYIi9qEbFEUpCyikmnOYe4YlP8BMUdTcNCAquAKzu+FA7rZ1onj9x80mbnDdOW/K5bFf3Tv5kJplP33+gAbQ==
 
-"@types/lodash@^4.14.137":
-  version "4.14.138"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.138.tgz#34f52640d7358230308344e579c15b378d91989e"
-  integrity sha512-A4uJgHz4hakwNBdHNPdxOTkYmXNgmUAKLbXZ7PKGslgeV0Mb8P3BlbYfPovExek1qnod4pDfRbxuzcVs3dlFLg==
-
-"@types/ms@^0.7.30":
+"@types/ms@^0.7.31":
   version "0.7.31"
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
@@ -1501,15 +1496,15 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@workgrid/courier@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.6.0.tgz#fd3d3192890c1f5fcc46e01f8b7e0ac072f946f0"
-  integrity sha512-+gfGATbk6FEHdcaapu8DkIc7AWSU5n2dYMkOa26OL4p7HxFu3bmv5MoC4TvBg4VxZ3q0rQejYAZpN9BIl7A1rA==
+"@workgrid/courier@0.0.0-bdf80d3":
+  version "0.0.0-bdf80d3"
+  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.0.0-bdf80d3.tgz#5900af59e4f53ad528fe769ea4dcc0ead16c7f55"
+  integrity sha512-IyV/NsOfKghdhJzfoB0O3ruZwGhvrq57nuFx4OEryUZd/kUaRMJbw1/+qFb3V4Sy2gz651KL7i6Hh9Ui/5C6FQ==
   dependencies:
     "@babel/runtime" "^7.4.4"
     "@types/debug" "^4.1.5"
-    "@types/lodash" "^4.14.137"
-    "@types/ms" "^0.7.30"
+    "@types/lodash" "^4.14.139"
+    "@types/ms" "^0.7.31"
     "@types/uuid" "^3.4.5"
     debug "^4.1.1"
     lodash "^4.17.11"
@@ -1517,15 +1512,13 @@
     nice-try "^2.0.0"
     uuid "^3.3.2"
 
-"@workgrid/micro-app@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.9.0.tgz#eb31953109084d3d9537e23063329f70f5f25690"
-  integrity sha512-H9DjRLQWVhRAQfFCTy6q8DPt8geKF/NhAxzEdb52fjNQGVEa6xHDBWJGdJH+4imCht6igd8p/DMion0lCixRig==
+"@workgrid/micro-app@0.0.0-bdf80d3":
+  version "0.0.0-bdf80d3"
+  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.0.0-bdf80d3.tgz#e8ba1311b51430bf25add0a558c2c733e933d2b5"
+  integrity sha512-UUXods3Swdo5DFiWjDsNaM1+uhngFaHTidiWe2mpuBRFMSTdPDf61eqsVsFzxQjzdk8m7a/fTGaQgv2Ns9OKEg==
   dependencies:
-    "@types/jwt-decode" "^2.2.1"
-    "@types/lodash" "^4.14.137"
-    "@types/ms" "^0.7.30"
-    "@workgrid/courier" "^0.6.0"
+    "@workgrid/courier" "0.0.0-bdf80d3"
+    bluebird "^3.7.0"
     core-js "^3.2.1"
     jwt-decode "^2.2.0"
     lodash "^4.17.11"
@@ -2117,6 +2110,11 @@ bluebird@^3.5.5:
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.5.tgz#a8d0afd73251effbbd5fe384a77d73003c17a71f"
   integrity sha512-5am6HnnfN+urzt4yfg7IgTbotDjIT/u8AJpEt0sIU9FtXfVeezXAPKswrG+xKUCOYAINpSdgZVDU6QFh+cuH3w==
+
+bluebird@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.0.tgz#56a6a886e03f6ae577cffedeb524f8f2450293cf"
+  integrity sha512-aBQ1FxIa7kSWCcmKHlcHFlT2jt6J/l4FzC7KcPELkOJOsPOb/bccdhmIrKDfXhwFrmc7vDoDrrepFvGqjyXGJg==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
@@ -8069,7 +8067,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.10, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -8282,11 +8280,6 @@ react-error-overlay@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.1.tgz#b8d3cf9bb991c02883225c48044cb3ee20413e0f"
   integrity sha512-V9yoTr6MeZXPPd4nV/05eCBvGH9cGzc52FN8fs0O0TVQ3HYYf1n7EgZVtHbldRq5xU9zEzoXIITjYNIfxDDdUw==
-
-react-ga@^2.2.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.6.0.tgz#c3fe830ead2ad25117e1d33280d9698de9b28496"
-  integrity sha512-GWHBWZDFjDGMkIk1LzroIn0mNTygKw3adXuqvGvheFZvlbpqMPbHsQsTdQBIxRRdXGQM/Zq+dQLRPKbwIHMTaw==
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.9.0"
