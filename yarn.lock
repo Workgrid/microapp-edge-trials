@@ -1469,10 +1469,10 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
-"@workgrid/courier@0.0.0-d445e47":
-  version "0.0.0-d445e47"
-  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.0.0-d445e47.tgz#8fa76878ea6e3df73c41ca637d79b10ebe5d5140"
-  integrity sha512-ob9qg0r4n5uBUZYAsY2qMklGOCuNZczCGg8p1GemMFTEGO81Q8HfMP61IlgcdtbMHNU18GUrc4l9NnP3kBPc8g==
+"@workgrid/courier@^0.6.0":
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/@workgrid/courier/-/courier-0.6.2.tgz#73ccbc6d18a454173d2863e9c82a996b84439af9"
+  integrity sha512-GZPiwuxsJF306x224Rz3+1ZDWMdFfGO1JZ9yAz/tnRHcsFKioc9uraYpjpvZsnNdIsYFJBulYiCenCi4IPmAEA==
   dependencies:
     debug "^4.1.1"
     lodash "^4.17.11"
@@ -1480,12 +1480,12 @@
     nice-try "^2.0.0"
     uuid "^3.3.2"
 
-"@workgrid/micro-app@0.0.0-d445e47":
-  version "0.0.0-d445e47"
-  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.0.0-d445e47.tgz#c56ea185af5531430dde9b00393388e4ecd9b1c9"
-  integrity sha512-f6uTcl2/Oz0xiO2hpms4HdwbzmaoyUl4MUzgAtliFfObVLxJ2saCOxR13lIGn0skAf9LOku81/eK8GqZDXgbLQ==
+"@workgrid/micro-app@^0.9.3":
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@workgrid/micro-app/-/micro-app-0.9.3.tgz#008346b1f30986698e598ad7181a6dd53ad375b2"
+  integrity sha512-uZl+Cc/btH87Zl/kunCp3BUPXG2IhR8zS7VISk+FsDaPm/p1Vaggrb+9pyOZDwC0jknYsTLIsGIZiLnEHfhrKA==
   dependencies:
-    "@workgrid/courier" "0.0.0-d445e47"
+    "@workgrid/courier" "^0.6.0"
     jwt-decode "^2.2.0"
     lodash "^4.17.11"
     ms "^2.1.1"
