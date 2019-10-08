@@ -4,6 +4,7 @@ import Debugger from '../components/Debugger'
 import './summary.css'
 
 import { version } from '../../package.json'
+import Tests from '../components/Tests'
 
 const Summary = () => {
   const microapp = useRef(
@@ -30,6 +31,7 @@ const Summary = () => {
       <h1>Edge Microapp</h1>
       <p>This is the "edgy" microapp v{version}</p>
       <section className="section">
+        <Tests panel="summary" microapp={microapp} />
         <input type="text" placeholder="Input Test"></input>
       </section>
       <div className="action-block vertical">
