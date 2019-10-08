@@ -1,6 +1,6 @@
 {
   "name": "@workgrid/microapp-edge-trials",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "private": true,
   "dependencies": {
     "@workgrid/micro-app": "^0.9.3",
