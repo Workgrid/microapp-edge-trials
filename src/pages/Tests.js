@@ -15,7 +15,7 @@ const Detail = () => {
     <div className="container">
       <h1>Tests in Detail</h1>
       <div className="example-block">
-        <Tests microapp={microapp} panel={'detail'} />
+        <Tests microapp={microapp.current} panel={'detail'} />
       </div>
     </div>
   )

@@ -31,7 +31,7 @@ const Summary = () => {
       <h1>Edge Microapp</h1>
       <p>This is the "edgy" microapp v{version}</p>
       <section className="section">
-        <Tests panel="summary" microapp={microapp} />
+        <Tests panel="summary" microapp={microapp.current} />
         <input type="text" placeholder="Input Test"></input>
       </section>
       <div className="action-block vertical">
