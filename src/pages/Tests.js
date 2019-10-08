@@ -11,6 +11,10 @@ const Detail = () => {
     })
   )
 
+  useEffect(() => {
+    microapp.current.initialize()
+  }, [])
+
   return (
     <div className="container">
       <h1>Tests in Detail</h1>
