@@ -28,7 +28,7 @@ const Summary = () => {
 
   return (
     <div>
-      <h1>Edge Microapp</h1>
+      <h1>Edge MicroUI</h1>
       <p>This is the "edgy" microapp v{version}</p>
       <section className="section">
         <Tests panel="summary" microapp={microapp.current} />
