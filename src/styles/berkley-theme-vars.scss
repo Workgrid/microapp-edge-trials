@@ -1,0 +1,43 @@
+$defaultRoot: ("background": #ffffff, "foreground": #999999);
+
+$defaultContainers: (
+  "primary": ("contrastToRoot": #78E1E1, "contrastToContainer": #1A1446),
+  "secondary": ("contrastToRoot": #343741, "contrastToContainer": #ffffff),
+  "dark": ("contrastToRoot": #1A1446, "contrastToContainer": #ffffff),
+  "medium": ("contrastToRoot": #343741, "contrastToContainer": #ffffff),
+  "light": ("contrastToRoot": #BABABA, "contrastToContainer": #ffffff),
+  "accent": ("contrastToRoot": #2E89FC, "contrastToContainer": #ffffff),
+  "attention": ("contrastToRoot": #D0021B, "contrastToContainer": #ffffff),
+  "good": ("contrastToRoot": #04A605, "contrastToContainer": #ffffff),
+  "warning": ("contrastToRoot": #FF9200, "contrastToContainer": #ffffff),
+  "link": ("contrastToRoot": #06748C, "contrastToContainer": #ffffff)
+);
+
+$secondaryRoot: ("background": #c0c0c0, "foreground": #6b6b6b);
+
+$secondaryContainers: (
+  "primary": ("contrastToRoot": #78E1E1, "contrastToContainer": #1A1446),
+  "secondary": ("contrastToRoot": #343741, "contrastToContainer": #ffffff),
+  "dark": ("contrastToRoot": #1A1446, "contrastToContainer": #ffffff),
+  "medium": ("contrastToRoot": #343741, "contrastToContainer": #ffffff),
+  "light": ("contrastToRoot": #BABABA, "contrastToContainer": #ffffff),
+  "accent": ("contrastToRoot": #2E89FC, "contrastToContainer": #ffffff),
+  "attention": ("contrastToRoot": #D0021B, "contrastToContainer": #ffffff),
+  "good": ("contrastToRoot": #04A605, "contrastToContainer": #ffffff),
+  "warning": ("contrastToRoot": #FF9200, "contrastToContainer": #ffffff),
+  "link": ("contrastToRoot": #06748C, "contrastToContainer": #ffffff)
+);
+
+
+$fontFamily: Roboto, Arial, sans-serif;
+$fontWeights: ("bolder": 700, "default": 400, "lighter": 300);
+$fontSizes: ("small": 0.75rem, "default": 0.8125rem, "medium": 1rem, "large": 1.125rem, "xlarge": 1.875rem);
+$fontLineHeights: ("small": 1.2, "default": 1.4, "medium": 1.25, "large": 1.2, "xlarge": 1.17);
+
+$inputBorderRadius: 5px;
+
+$buttonBorderRadius: 20px;
+$buttonOutlines: (
+  "secondary": "outline"
+);
+$buttonText: uppercase;

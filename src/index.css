@@ -1,27 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  background-color: #fff;
-  background-repeat: no-repeat;
-  padding: 15px 0px;
-  font-size: 16px;
-}
-
 h1 {
   text-align: center;
   margin: 0;
@@ -33,51 +9,6 @@ p {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.action-block button {
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 11px;
-  text-overflow: ellipsis;
-  text-align: center;
-  outline: 0;
-  cursor: pointer;
-  margin: 10px 10px;
-  color: grey;
-  background: white;
-  border-radius: 2px;
-  font-size: 16px;
-}
-
-.action-block button.primary {
-  color: #ffffff;
-  background: #4a90e2;
-  border: 0;
-}
-
-.action-block button.secondary {
-  color: #ffffff;
-  background: #999999;
-  border: 0;
-}
-
-.action-small {
-  color: #ffffff;
-  background: #4a90e2;
-  padding: 4px 15px;
-  border-radius: 3px;
-  border: 0;
-}
-
-input {
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #999999;
-  background: #ffffff;
-  display: block;
-  width: 100%;
 }
 
 .example-block {
@@ -120,7 +51,7 @@ input {
   display: flex;
   flex-direction: row;
   border-top: 1px solid #bababa;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .action-block.vertical {
@@ -128,6 +59,5 @@ input {
 }
 
 .action-block.vertical button {
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin: 10px 15px 5px 15px;
 }

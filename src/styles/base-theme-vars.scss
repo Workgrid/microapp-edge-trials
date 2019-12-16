@@ -1,0 +1,40 @@
+$defaultRoot: ("background": #ffffff, "foreground": #6b6b6b);
+
+$defaultContainers: (
+  "primary": ("contrastToRoot": #498bcc, "contrastToContainer": #ffffff),
+  "secondary": ("contrastToRoot": #BABABA, "contrastToContainer": #ffffff),
+  "dark": ("contrastToRoot": #1b1b1b, "contrastToContainer": #ffffff),
+  "medium": ("contrastToRoot": #999999, "contrastToContainer": #ffffff),
+  "light": ("contrastToRoot": #BABABA, "contrastToContainer": #ffffff),
+  "accent": ("contrastToRoot": #2E89FC, "contrastToContainer": #ffffff),
+  "attention": ("contrastToRoot": #c9282d, "contrastToContainer": #ffffff),
+  "good": ("contrastToRoot": #04A605, "contrastToContainer": #ffffff),
+  "warning": ("contrastToRoot": #FF9200, "contrastToContainer": #ffffff),
+  "link": ("contrastToRoot": #498bcc, "contrastToContainer": #ffffff)
+);
+
+$secondaryRoot: ("background": #c0c0c0, "foreground": #6b6b6b);
+
+$secondaryContainers: (
+  "primary": ("contrastToRoot": #498bcc, "contrastToContainer": #ffffff),
+  "secondary": ("contrastToRoot": #BABABA, "contrastToContainer": #ffffff),
+  "dark": ("contrastToRoot": #1b1b1b, "contrastToContainer": #ffffff),
+  "medium": ("contrastToRoot": #999999, "contrastToContainer": #ffffff),
+  "light": ("contrastToRoot": #BABABA, "contrastToContainer": #ffffff),
+  "accent": ("contrastToRoot": #2E89FC, "contrastToContainer": #ffffff),
+  "attention": ("contrastToRoot": #c9282d, "contrastToContainer": #ffffff),
+  "good": ("contrastToRoot": #04A605, "contrastToContainer": #ffffff),
+  "warning": ("contrastToRoot": #FF9200, "contrastToContainer": #ffffff),
+  "link": ("contrastToRoot": blue, "contrastToContainer": orange)
+);
+
+$fontFamily: Roboto, Arial, sans-serif;
+$fontWeights: ("bolder": 700, "default": 400, "lighter": 300);
+$fontSizes: ("small": 0.75rem, "default": 0.8125rem, "medium": 1rem, "large": 1.125rem, "xlarge": 1.875rem);
+$fontLineHeights: ("small": 1.2, "default": 1.4, "medium": 1.25, "large": 1.2, "xlarge": 1.17);
+
+$inputBorderRadius: 5px;
+
+$buttonBorderRadius: 2px;
+$buttonOutlines: ();
+$buttonText: uppercase;
