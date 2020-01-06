@@ -10,7 +10,7 @@ export default ({ microapp, panel = 'summary' }) => {
   const testActions = useRef({})
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => testToken(), [microapp])
+  // useEffect(() => testToken(), [microapp])
 
   useEffect(() => {
     testActions.current.Token = testToken
@@ -98,7 +98,7 @@ export default ({ microapp, panel = 'summary' }) => {
             )}
             <div className="item">{test.name}</div>
             <div className="item">
-              <button className="action-small" onClick={runTest(test.name)}>
+              <button className="btn small action-small" onClick={runTest(test.name)}>
                 Run
               </button>
             </div>

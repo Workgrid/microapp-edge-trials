@@ -27,20 +27,22 @@ const Summary = () => {
   }
 
   return (
-    <div>
+    <>
       <h1>Edge MicroUI</h1>
       <p>This is the "edgy" microapp v{version}</p>
       <section className="section">
-        <Tests panel="summary" microapp={microapp.current} />
-        <input type="text" placeholder="Input Test"></input>
+        <form>
+          <Tests panel="summary" microapp={microapp.current} />
+          <input type="text" style={{ marginTop: '.4rem' }} className="form-control" placeholder="Input Test"></input>
+        </form>
       </section>
       <div className="action-block vertical">
         <Debugger />
-        <button className="primary" onClick={() => showDetail('featurepolicy')}>
+        <button className="btn primary" onClick={() => showDetail('featurepolicy')}>
           Feature Policy
         </button>
       </div>
-    </div>
+    </>
   )
 }
 

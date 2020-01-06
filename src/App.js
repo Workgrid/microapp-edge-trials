@@ -7,11 +7,13 @@ import Tests from './pages/Tests'
 
 const App = () => {
   return (
-    <Router basename={window.location.pathname}>
-      <Route path="/" exact component={Summary} />
-      <Route path="/featurepolicy" component={FeaturePolicyDetail} />
-      <Route path="/tests" component={Tests} />
-    </Router>
+    <div className="workgrid">
+      <Router basename={window.location.pathname}>
+        <Route path="/" exact component={Summary} />
+        <Route path="/featurepolicy" component={FeaturePolicyDetail} />
+        <Route path="/tests" component={Tests} />
+      </Router>
+    </div>
   )
 }
 
