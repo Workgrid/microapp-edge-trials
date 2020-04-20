@@ -1,6 +1,8 @@
 .checklist {
   display: flex;
   flex-direction: row;
+  min-height: 1.5rem;
+  align-items: center;
 }
 
 .checklist .pass {

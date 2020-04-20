@@ -1,6 +1,6 @@
 {
   "name": "@workgrid/microapp-edge-trials",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "private": true,
   "dependencies": {
     "@workgrid/micro-app": "^0.9.3",
@@ -32,7 +32,13 @@
   ],
   "devDependencies": {
     "copyfiles": "^2.1.1",
+    "prettier": "^2.0.4",
     "rimraf": "^3.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 120,
+    "singleQuote": true
   },
   "homepage": "https://workgrid.github.io/microapp-edge-trials/"
 }

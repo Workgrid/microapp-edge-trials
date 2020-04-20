@@ -32,8 +32,9 @@ const Summary = () => {
       <p>This is the "edgy" microapp v{version}</p>
       <section className="section">
         <form>
-          <Tests panel="summary" microapp={microapp.current} />
-          <input type="text" style={{ marginTop: '.4rem' }} className="form-control" placeholder="Input Test"></input>
+          <Tests style={{ marginBottom: '1rem' }} panel="summary" microapp={microapp.current} />
+          <label htmlFor="test-input">Test Input:</label>
+          <input id="test-input" type="text" style={{ marginTop: '.4rem' }} className="form-control" placeholder="Input Test" />
         </form>
       </section>
       <div className="action-block vertical">

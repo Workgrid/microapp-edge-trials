@@ -3,9 +3,9 @@ import { decode } from 'jsonwebtoken'
 
 const testTypes = [{ name: 'Token' }, { name: 'Title' }, { name: 'Show', inDetail: false }, { name: 'Hide' }]
 
-export default ({ microapp, panel = 'summary' }) => {
+export default ({ microapp, panel = 'summary', className, style }) => {
   const [tests, setTests] = useState(
-    testTypes.map(testType => ({ inSummary: true, inDetail: true, loading: false, result: false, ...testType }))
+    testTypes.map((testType) => ({ inSummary: true, inDetail: true, loading: false, result: false, ...testType }))
   )
   const testActions = useRef({})
 
@@ -19,13 +19,13 @@ export default ({ microapp, panel = 'summary' }) => {
     testActions.current.Hide = testHide
   })
 
-  const runTest = testName => () => {
+  const runTest = (testName) => () => {
     testActions.current[testName]()
   }
 
   const updateTest = (name, update) => {
-    setTests(prevTests => {
-      return prevTests.map(test => {
+    setTests((prevTests) => {
+      return prevTests.map((test) => {
         if (test.name === name) {
           return { ...test, ...update }
         } else {
@@ -73,11 +73,11 @@ export default ({ microapp, panel = 'summary' }) => {
   }
 
   return (
-    <>
+    <div className={'container ' + className} style={style}>
       <strong>Tests:</strong>
       {tests
-        .filter(test => (panel === 'summary' && test.inSummary) || (panel === 'detail' && test.inDetail))
-        .map(test => (
+        .filter((test) => (panel === 'summary' && test.inSummary) || (panel === 'detail' && test.inDetail))
+        .map((test) => (
           <div className="checklist" key={test.name}>
             {test.loading ? (
               <span aria-label="loading" role="img" className="pass">
@@ -104,6 +104,21 @@ export default ({ microapp, panel = 'summary' }) => {
             </div>
           </div>
         ))}
-    </>
+
+      <div className="checklist">
+        <a href="./test-internal.html">Internal Link</a>
+      </div>
+      <div className="checklist">
+        <a href="https://www.bing.com?q=external" target="_blank">
+          External Link
+        </a>
+      </div>
+      <div className="checklist">
+        <a href="tel:1-562-867-5309">Tel Link</a>
+      </div>
+      <div className="checklist">
+        <a href="mailto:support@workgrid.com">Mailto Link</a>
+      </div>
+    </div>
   )
 }
