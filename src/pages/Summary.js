@@ -15,14 +15,14 @@ const Summary = () => {
     // We have to use the hash router to show detail due to Github pages limitations
     microapp.current.showDetail({
       url: `${window.location.origin}${window.location.pathname}#/${detailPage}`,
-      title: 'UAT Microapp Detail',
+      title: 'Edge Trial Microapp Detail',
     })
   }
 
   return (
     <div>
-      <h1>UAT Microapp</h1>
-      <p>This is the "UAT" microapp. v{version}</p>
+      <h1>Edge Trials 🔪</h1>
+      <p>This is the Edge Trials. v{version}</p>
       <section className="section">
         <Tests microapp={microapp.current} panel="summary" />
         <label htmlFor="test-input">Test Input</label>
