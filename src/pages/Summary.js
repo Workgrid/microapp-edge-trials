@@ -1,49 +1,42 @@
 import React, { useRef, useEffect } from 'react'
-import MicroApp from '@workgrid/micro-app'
-import Debugger from '../components/Debugger'
-import './summary.css'
-
-import { version } from '../../package.json'
 import Tests from '../components/Tests'
+import MicroApp from '@workgrid/micro-app'
+import './summary.css'
+import { version } from '../../package.json'
 
 const Summary = () => {
-  const microapp = useRef(
-    new MicroApp({
-      id: 'edge-microapp-local',
-      audience: 'edge-microapp'
-    })
-  )
+  const microapp = useRef(new MicroApp())
 
   useEffect(() => {
     microapp.current.initialize()
   }, [])
 
-  const showDetail = detailPage => {
+  const showDetail = (detailPage) => {
     // We have to use the hash router to show detail due to Github pages limitations
     microapp.current.showDetail({
       url: `${window.location.origin}${window.location.pathname}#/${detailPage}`,
-      title: 'Edge Microapp'
+      title: 'UAT Microapp Detail',
     })
   }
 
   return (
-    <>
-      <h1>Edge MicroUI</h1>
-      <p>This is the "edgy" microapp v{version}</p>
+    <div>
+      <h1>UAT Microapp</h1>
+      <p>This is the "UAT" microapp. v{version}</p>
       <section className="section">
-        <form>
-          <Tests style={{ marginBottom: '1rem' }} panel="summary" microapp={microapp.current} />
-          <label htmlFor="test-input">Test Input:</label>
-          <input id="test-input" type="text" style={{ marginTop: '.4rem' }} className="form-control" placeholder="Input Test" />
-        </form>
+        <Tests microapp={microapp.current} panel="summary" />
+        <label htmlFor="test-input">Test Input</label>
+        <input type="text" placeholder="Input Test" name="test-input" />
       </section>
       <div className="action-block vertical">
-        <Debugger />
-        <button className="btn primary" onClick={() => showDetail('featurepolicy')}>
-          Feature Policy
+        <button className="primary" onClick={() => showDetail('iframe')}>
+          iFrame Tests
+        </button>
+        <button className="primary" onClick={() => showDetail('exception')}>
+          Exception Tests
         </button>
       </div>
-    </>
+    </div>
   )
 }
 

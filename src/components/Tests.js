@@ -3,14 +3,11 @@ import { decode } from 'jsonwebtoken'
 
 const testTypes = [{ name: 'Token' }, { name: 'Title' }, { name: 'Show', inDetail: false }, { name: 'Hide' }]
 
-export default ({ microapp, panel = 'summary', className, style }) => {
+export default ({ microapp, panel = 'summary' }) => {
   const [tests, setTests] = useState(
     testTypes.map((testType) => ({ inSummary: true, inDetail: true, loading: false, result: false, ...testType }))
   )
   const testActions = useRef({})
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  // useEffect(() => testToken(), [microapp])
 
   useEffect(() => {
     testActions.current.Token = testToken
@@ -73,7 +70,7 @@ export default ({ microapp, panel = 'summary', className, style }) => {
   }
 
   return (
-    <div className={'container ' + className} style={style}>
+    <>
       <strong>Tests:</strong>
       {tests
         .filter((test) => (panel === 'summary' && test.inSummary) || (panel === 'detail' && test.inDetail))
@@ -98,27 +95,12 @@ export default ({ microapp, panel = 'summary', className, style }) => {
             )}
             <div className="item">{test.name}</div>
             <div className="item">
-              <button className="btn small action-small" onClick={runTest(test.name)}>
+              <button className="action-small" onClick={runTest(test.name)}>
                 Run
               </button>
             </div>
           </div>
         ))}
-
-      <div className="checklist">
-        <a href="./test-internal.html">Internal Link</a>
-      </div>
-      <div className="checklist">
-        <a href="https://www.bing.com?q=external" target="_blank">
-          External Link
-        </a>
-      </div>
-      <div className="checklist">
-        <a href="tel:1-562-867-5309">Tel Link</a>
-      </div>
-      <div className="checklist">
-        <a href="mailto:support@workgrid.com">Mailto Link</a>
-      </div>
-    </div>
+    </>
   )
 }

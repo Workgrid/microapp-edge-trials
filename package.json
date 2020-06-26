@@ -3,7 +3,7 @@
   "version": "0.2.8",
   "private": true,
   "dependencies": {
-    "@workgrid/micro-app": "^0.9.3",
+    "@workgrid/micro-app": "^0.9.6",
     "core-js-pure": "^3.1.4",
     "jsonwebtoken": "^8.5.1",
     "node-sass": "^4.13.0",
