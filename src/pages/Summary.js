@@ -5,7 +5,7 @@ import './summary.css'
 import { version } from '../../package.json'
 
 const searchParams = new URLSearchParams(window.location.search)
-const shouldBeHeightZero = !searchParams.get('heightZero')
+const shouldBeHeightZero = searchParams.get('heightZero')
 
 const Summary = () => {
   const microapp = useRef(new MicroApp())
