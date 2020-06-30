@@ -41,12 +41,11 @@ export default ({ microapp, panel = 'summary' }) => {
       const token = await microapp.getToken()
       // This would be done on a server side, notice how I'm not verifying the token
       const decodedToken = decode(token)
-      // TODO alter this verification when this app is upgraded to the more secure token
-      if (decodedToken.aud === process.env.REACT_APP_AUD) {
+      if (decodedToken.aud === window.location.origin + window.location.pathname) {
         updateTest('Token', { loading: false, result: true })
       } else {
         updateTest('Token', { loading: false, result: false })
-        console.warn(`Invalid token: ${decodedToken.aud} !== ${process.env.REACT_APP_AUD}`)
+        console.warn(`Invalid token: ${decodedToken.aud} !== ${window.location.origin + window.location.pathname}`)
       }
     }, 500)
   }
