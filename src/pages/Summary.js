@@ -11,7 +11,7 @@ const Summary = () => {
   const microapp = useRef(new MicroApp())
 
   useEffect(() => {
-    // microapp.current.initialize()
+    microapp.current.initialize()
   }, [])
 
   const showDetail = (detailPage) => {
