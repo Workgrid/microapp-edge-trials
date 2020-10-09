@@ -11,7 +11,7 @@ const Summary = () => {
   const microapp = useRef(new MicroApp())
 
   useEffect(() => {
-    microapp.current.initialize()
+    // microapp.current.initialize()
   }, [])
 
   const showDetail = (detailPage) => {
@@ -27,23 +27,35 @@ const Summary = () => {
   }
 
   return (
-    <div>
-      <h1>Edge Trials 🔪</h1>
-      <p>This is the Edge Trials. v{version}</p>
-      <section className="section">
-        <Tests microapp={microapp.current} panel="summary" />
-        <label htmlFor="test-input">Test Input</label>
-        <input type="text" placeholder="Input Test" name="test-input" />
-      </section>
-      <div className="action-block vertical">
-        <button className="primary" onClick={() => showDetail('iframe')}>
-          iFrame Tests
-        </button>
-        <button className="primary" onClick={() => showDetail('exception')}>
-          Exception Tests
-        </button>
-      </div>
-    </div>
+    <article className="summary">
+      <header>
+        <img alt="Edge Trials Logo" src="https://cdn.dev.workgrid.com/connectors/lyssa_mock/logos/fire_alarm-512.png" />
+        <h1>
+          Edge Trials{' '}
+          <span role="img" aria-label="A knife">
+            🔪
+          </span>
+        </h1>
+      </header>
+      <main>
+        <p>This is the Edge Trials. v{version}</p>
+
+        <section className="section">
+          <Tests microapp={microapp.current} panel="summary" />
+          <label htmlFor="test-input">Test Input</label>
+          <input className="form-control" type="text" placeholder="Input Test" name="test-input" />
+        </section>
+
+        <div className="action-block vertical">
+          <button className="btn primary" onClick={() => showDetail('iframe')}>
+            iFrame Tests
+          </button>
+          <button className="btn primary" onClick={() => showDetail('exception')}>
+            Exception Tests
+          </button>
+        </div>
+      </main>
+    </article>
   )
 }
 

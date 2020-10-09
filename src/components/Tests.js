@@ -71,35 +71,37 @@ export default ({ microapp, panel = 'summary' }) => {
   return (
     <>
       <strong>Tests:</strong>
-      {tests
-        .filter((test) => (panel === 'summary' && test.inSummary) || (panel === 'detail' && test.inDetail))
-        .map((test) => (
-          <div className="checklist" key={test.name}>
-            {test.loading ? (
-              <span aria-label="loading" role="img" className="pass">
-                🤔
-              </span>
-            ) : (
-              <>
-                {test.result ? (
-                  <span aria-label="pass" role="img" className="pass">
-                    ✅
-                  </span>
-                ) : (
-                  <span aria-label="fail" role="img" className="pass">
-                    ❌
-                  </span>
-                )}
-              </>
-            )}
-            <div className="item">{test.name}</div>
-            <div className="item">
-              <button className="action-small" onClick={runTest(test.name)}>
-                Run
-              </button>
-            </div>
-          </div>
-        ))}
+      <ul className="action-list">
+        {tests
+          .filter((test) => (panel === 'summary' && test.inSummary) || (panel === 'detail' && test.inDetail))
+          .map((test) => (
+            <li className="checklist" key={test.name}>
+              {test.loading ? (
+                <span aria-label="loading" role="img" className="pass">
+                  🤔
+                </span>
+              ) : (
+                <>
+                  {test.result ? (
+                    <span aria-label="pass" role="img" className="pass">
+                      ✅
+                    </span>
+                  ) : (
+                    <span aria-label="fail" role="img" className="pass">
+                      ❌
+                    </span>
+                  )}
+                </>
+              )}
+              <div className="item">{test.name}</div>
+              <div className="item">
+                <button className="btn primary action-small" onClick={runTest(test.name)}>
+                  Test {test.name}
+                </button>
+              </div>
+            </li>
+          ))}
+      </ul>
     </>
   )
 }
