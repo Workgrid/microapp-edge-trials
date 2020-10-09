@@ -11,8 +11,22 @@ const Summary = () => {
   const microapp = useRef(new MicroApp())
 
   useEffect(() => {
-    microapp.current.initialize()
+    if (window.parent.location !== window.location) {
+      // If we are in an iframe, do the microapp stuff
+      // This is a very basic way to do this since we don't need auth or communication to test this app
+      microapp.current.initialize()
+    }
   }, [])
+
+  const switchTheme = () => {
+    // Super POC, don't look at this
+    const styleTag = document.querySelector('#customer-styles')
+    if (styleTag.href.match(/base/)) {
+      styleTag.href = styleTag.href.replace(/base/, 'berkley')
+    } else {
+      styleTag.href = styleTag.href.replace(/berkley/, 'base')
+    }
+  }
 
   const showDetail = (detailPage) => {
     // We have to use the hash router to show detail due to Github pages limitations
@@ -47,7 +61,10 @@ const Summary = () => {
         </section>
 
         <div className="action-block vertical">
-          <button className="btn primary" onClick={() => showDetail('iframe')}>
+          <button className="btn secondary" onClick={switchTheme}>
+            Switch Theme
+          </button>
+          <button className="btn secondary" onClick={() => showDetail('iframe')}>
             iFrame Tests
           </button>
           <button className="btn primary" onClick={() => showDetail('exception')}>

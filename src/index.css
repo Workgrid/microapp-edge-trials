@@ -54,14 +54,26 @@ code {
 
 .action-block {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 1rem;
 }
 
-.action-block.vertical {
-  flex-direction: column;
+.action-block button {
+  margin: 0 0 8px 0;
+  flex: 1;
 }
 
-.action-block.vertical button {
-  margin: 0 0 8px 0;
+.action-block button:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 500px) {
+  .action-block {
+    flex-direction: row;
+  }
+
+  .action-block button {
+    margin: 0 8px 0 0;
+  }
 }

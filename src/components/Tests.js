@@ -69,8 +69,8 @@ export default ({ microapp, panel = 'summary' }) => {
   }
 
   return (
-    <>
-      <strong>Tests:</strong>
+    <div>
+      <h2>Tests:</h2>
       <ul className="action-list">
         {tests
           .filter((test) => (panel === 'summary' && test.inSummary) || (panel === 'detail' && test.inDetail))
@@ -102,6 +102,6 @@ export default ({ microapp, panel = 'summary' }) => {
             </li>
           ))}
       </ul>
-    </>
+    </div>
   )
 }
