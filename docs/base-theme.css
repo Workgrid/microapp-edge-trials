@@ -1,0 +1,908 @@
+:root {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #707070;
+  --ion-font-family: Roboto, Arial, sans-serif;
+  --ion-color-primary: #003399;
+  --ion-color-primary-rgb: 0, 51, 153;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: black;
+  --ion-color-primary-tint: #0055ff;
+  --ion-color-secondary: #63768D;
+  --ion-color-secondary-rgb: 99, 118, 141;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #0f1215;
+  --ion-color-secondary-tint: #9caaba;
+  --ion-color-tertiary: #0248D5;
+  --ion-color-tertiary-rgb: 2, 72, 213;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #00040b;
+  --ion-color-tertiary-tint: #407ffd;
+  --ion-color-success: #37D88A;
+  --ion-color-success-rgb: 55, 216, 138;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0b3822;
+  --ion-color-success-tint: #8ce9bc;
+  --ion-color-warning: #FFAB00;
+  --ion-color-warning-rgb: 255, 171, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #332200;
+  --ion-color-warning-tint: #ffcd66;
+  --ion-color-danger: #F53F41;
+  --ion-color-danger-rgb: 245, 63, 65;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #630506;
+  --ion-color-danger-tint: #faa0a1;
+  --ion-color-light: #BFBFBF;
+  --ion-color-light-rgb: 191, 191, 191;
+  --ion-color-light-contrast: #ffffff;
+  --ion-color-light-contrast-rgb: 255, 255, 255;
+  --ion-color-light-shade: #595959;
+  --ion-color-light-tint: #f2f2f2;
+  --ion-color-medium: #707070;
+  --ion-color-medium-rgb: 112, 112, 112;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #0a0a0a;
+  --ion-color-medium-tint: #a3a3a3;
+  --ion-color-dark: #1B1B1B;
+  --ion-color-dark-rgb: 27, 27, 27;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: black;
+  --ion-color-dark-tint: #4e4e4e; }
+
+.workgrid,
+.default-container {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  background-color: #ffffff;
+  color: #707070; }
+  .workgrid *,
+  .default-container * {
+    box-sizing: border-box; }
+  .workgrid h1,
+  .workgrid h2,
+  .workgrid h3,
+  .workgrid h4,
+  .workgrid h5,
+  .workgrid h6,
+  .default-container h1,
+  .default-container h2,
+  .default-container h3,
+  .default-container h4,
+  .default-container h5,
+  .default-container h6 {
+    margin: 0; }
+  .workgrid h1,
+  .workgrid h2,
+  .default-container h1,
+  .default-container h2 {
+    font-size: 1.125rem;
+    line-height: 1.2; }
+  .workgrid h3,
+  .workgrid h4,
+  .default-container h3,
+  .default-container h4 {
+    font-size: 1rem;
+    line-height: 1.25; }
+  .workgrid h5,
+  .workgrid h6,
+  .default-container h5,
+  .default-container h6 {
+    font-size: 0.8125rem;
+    line-height: 1.4; }
+  .workgrid p.small,
+  .default-container p.small {
+    font-size: 0.75rem;
+    line-height: 1.2; }
+  .workgrid small,
+  .default-container small {
+    font-size: 0.75rem;
+    line-height: 1.2; }
+  .workgrid label,
+  .default-container label {
+    font-weight: 700; }
+  .workgrid span.extraLarge,
+  .default-container span.extraLarge {
+    font-size: 1.875rem;
+    line-height: 1.17; }
+  .workgrid .bg-default,
+  .default-container .bg-default {
+    background-color: #ffffff;
+    color: #707070; }
+  .workgrid .bg-secondary,
+  .default-container .bg-secondary {
+    background-color: #efefef;
+    color: #4f4f4f; }
+  .workgrid .summary,
+  .default-container .summary {
+    margin: 16px;
+    padding: 0; }
+    .workgrid .summary header,
+    .default-container .summary header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 40px;
+      padding: 0 0 5px 0; }
+      .workgrid .summary header > img:first-child,
+      .default-container .summary header > img:first-child {
+        flex: 0 0 auto;
+        height: 40px;
+        display: block;
+        margin-right: 8px; }
+  .workgrid .btn,
+  .default-container .btn {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    outline: 0;
+    cursor: pointer;
+    padding: 11px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.8125rem; }
+    .workgrid .btn:disabled,
+    .default-container .btn:disabled {
+      cursor: initial; }
+    .workgrid .btn.small,
+    .default-container .btn.small {
+      padding: 5px 10px; }
+    .workgrid .btn svg.icon,
+    .default-container .btn svg.icon {
+      height: 0.8125rem;
+      width: 0.8125rem;
+      margin-right: 5px; }
+  .workgrid form.was-validated select.error + .invalid-feedback,
+  .workgrid form.was-validated input.error + .invalid-feedback,
+  .workgrid form.was-validated input:invalid + .invalid-feedback,
+  .default-container form.was-validated select.error + .invalid-feedback,
+  .default-container form.was-validated input.error + .invalid-feedback,
+  .default-container form.was-validated input:invalid + .invalid-feedback {
+    display: block; }
+  .workgrid .form-control,
+  .default-container .form-control {
+    flex: 0 0 auto;
+    appearance: none;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.8125rem;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.75rem; }
+    .workgrid .form-control.icon-left,
+    .default-container .form-control.icon-left {
+      padding-left: 1.9rem;
+      background-position: left 0.75rem center; }
+  .workgrid .invalid-feedback,
+  .default-container .invalid-feedback {
+    font-size: 0.75rem;
+    margin: 0.4rem 0;
+    display: none; }
+  .workgrid span.required-indicator,
+  .default-container span.required-indicator {
+    padding: 0 0.4rem; }
+    .workgrid span.required-indicator:before,
+    .default-container span.required-indicator:before {
+      content: '*'; }
+  .workgrid svg.icon,
+  .default-container svg.icon {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    padding: 0; }
+  .workgrid h1,
+  .workgrid h2,
+  .workgrid h3,
+  .workgrid h4,
+  .workgrid h5,
+  .workgrid h6,
+  .default-container h1,
+  .default-container h2,
+  .default-container h3,
+  .default-container h4,
+  .default-container h5,
+  .default-container h6 {
+    color: #1B1B1B; }
+  .workgrid p,
+  .default-container p {
+    color: #707070; }
+    .workgrid p span.primary, .workgrid p.primary,
+    .default-container p span.primary,
+    .default-container p.primary {
+      color: #003399; }
+    .workgrid p span.secondary, .workgrid p.secondary,
+    .default-container p span.secondary,
+    .default-container p.secondary {
+      color: #63768D; }
+    .workgrid p span.dark, .workgrid p.dark,
+    .default-container p span.dark,
+    .default-container p.dark {
+      color: #1B1B1B; }
+    .workgrid p span.medium, .workgrid p.medium,
+    .default-container p span.medium,
+    .default-container p.medium {
+      color: #707070; }
+    .workgrid p span.light, .workgrid p.light,
+    .default-container p span.light,
+    .default-container p.light {
+      color: #BFBFBF; }
+    .workgrid p span.accent, .workgrid p.accent,
+    .default-container p span.accent,
+    .default-container p.accent {
+      color: #2e89fc; }
+    .workgrid p span.attention, .workgrid p.attention,
+    .default-container p span.attention,
+    .default-container p.attention {
+      color: #F53F41; }
+    .workgrid p span.good, .workgrid p.good,
+    .default-container p span.good,
+    .default-container p.good {
+      color: #37D88A; }
+    .workgrid p span.warning, .workgrid p.warning,
+    .default-container p span.warning,
+    .default-container p.warning {
+      color: #FFAB00; }
+    .workgrid p span.link, .workgrid p.link,
+    .default-container p span.link,
+    .default-container p.link {
+      color: #0248D5; }
+  .workgrid a,
+  .default-container a {
+    color: #0248D5; }
+  .workgrid form.was-validated input.error, .workgrid form.was-validated input:invalid,
+  .workgrid form.was-validated select.error,
+  .workgrid form.was-validated select:invalid,
+  .workgrid form.was-validated textarea.error,
+  .workgrid form.was-validated textarea:invalid,
+  .default-container form.was-validated input.error,
+  .default-container form.was-validated input:invalid,
+  .default-container form.was-validated select.error,
+  .default-container form.was-validated select:invalid,
+  .default-container form.was-validated textarea.error,
+  .default-container form.was-validated textarea:invalid {
+    border: 1px solid #F53F41; }
+  .workgrid .form-control,
+  .default-container .form-control {
+    color: #707070;
+    background-color: #ffffff;
+    border: 1px solid #BFBFBF; }
+    .workgrid .form-control:focus,
+    .default-container .form-control:focus {
+      border-color: #0248D5;
+      box-shadow: 0 0 3px 1px #0248D5; }
+    .workgrid .form-control:disabled,
+    .default-container .form-control:disabled {
+      background-color: #BFBFBF;
+      color: #ffffff; }
+    .workgrid .form-control::placeholder,
+    .default-container .form-control::placeholder {
+      color: #BFBFBF; }
+    .workgrid .form-control.bare,
+    .default-container .form-control.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid transparent; }
+    .workgrid .form-control.add,
+    .default-container .form-control.add {
+      background-image: url(https://cdn.dev.workgrid.com/connectors/lyssa_mock/icons/add.svg), linear-gradient(transparent, transparent); }
+  .workgrid .invalid-feedback,
+  .default-container .invalid-feedback {
+    color: #F53F41; }
+  .workgrid span.required-indicator,
+  .default-container span.required-indicator {
+    color: #F53F41; }
+  .workgrid .container-primary,
+  .default-container .container-primary {
+    background-color: #003399;
+    color: #ffffff; }
+    .workgrid .container-primary p,
+    .workgrid .container-primary label,
+    .workgrid .container-primary svg.icon,
+    .default-container .container-primary p,
+    .default-container .container-primary label,
+    .default-container .container-primary svg.icon {
+      color: #ffffff; }
+    .workgrid .container-primary.outline, .workgrid .container-primary.bare,
+    .default-container .container-primary.outline,
+    .default-container .container-primary.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #003399; }
+      .workgrid .container-primary.outline p,
+      .workgrid .container-primary.outline label,
+      .workgrid .container-primary.outline svg.icon, .workgrid .container-primary.bare p,
+      .workgrid .container-primary.bare label,
+      .workgrid .container-primary.bare svg.icon,
+      .default-container .container-primary.outline p,
+      .default-container .container-primary.outline label,
+      .default-container .container-primary.outline svg.icon,
+      .default-container .container-primary.bare p,
+      .default-container .container-primary.bare label,
+      .default-container .container-primary.bare svg.icon {
+        color: #003399; }
+    .workgrid .container-primary.bare,
+    .default-container .container-primary.bare {
+      border: 0; }
+  .workgrid .container-secondary,
+  .default-container .container-secondary {
+    background-color: #63768D;
+    color: #ffffff; }
+    .workgrid .container-secondary p,
+    .workgrid .container-secondary label,
+    .workgrid .container-secondary svg.icon,
+    .default-container .container-secondary p,
+    .default-container .container-secondary label,
+    .default-container .container-secondary svg.icon {
+      color: #ffffff; }
+    .workgrid .container-secondary.outline, .workgrid .container-secondary.bare,
+    .default-container .container-secondary.outline,
+    .default-container .container-secondary.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #63768D; }
+      .workgrid .container-secondary.outline p,
+      .workgrid .container-secondary.outline label,
+      .workgrid .container-secondary.outline svg.icon, .workgrid .container-secondary.bare p,
+      .workgrid .container-secondary.bare label,
+      .workgrid .container-secondary.bare svg.icon,
+      .default-container .container-secondary.outline p,
+      .default-container .container-secondary.outline label,
+      .default-container .container-secondary.outline svg.icon,
+      .default-container .container-secondary.bare p,
+      .default-container .container-secondary.bare label,
+      .default-container .container-secondary.bare svg.icon {
+        color: #63768D; }
+    .workgrid .container-secondary.bare,
+    .default-container .container-secondary.bare {
+      border: 0; }
+  .workgrid .container-dark,
+  .default-container .container-dark {
+    background-color: #1B1B1B;
+    color: #ffffff; }
+    .workgrid .container-dark p,
+    .workgrid .container-dark label,
+    .workgrid .container-dark svg.icon,
+    .default-container .container-dark p,
+    .default-container .container-dark label,
+    .default-container .container-dark svg.icon {
+      color: #ffffff; }
+    .workgrid .container-dark.outline, .workgrid .container-dark.bare,
+    .default-container .container-dark.outline,
+    .default-container .container-dark.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #1B1B1B; }
+      .workgrid .container-dark.outline p,
+      .workgrid .container-dark.outline label,
+      .workgrid .container-dark.outline svg.icon, .workgrid .container-dark.bare p,
+      .workgrid .container-dark.bare label,
+      .workgrid .container-dark.bare svg.icon,
+      .default-container .container-dark.outline p,
+      .default-container .container-dark.outline label,
+      .default-container .container-dark.outline svg.icon,
+      .default-container .container-dark.bare p,
+      .default-container .container-dark.bare label,
+      .default-container .container-dark.bare svg.icon {
+        color: #1B1B1B; }
+    .workgrid .container-dark.bare,
+    .default-container .container-dark.bare {
+      border: 0; }
+  .workgrid .container-medium,
+  .default-container .container-medium {
+    background-color: #707070;
+    color: #ffffff; }
+    .workgrid .container-medium p,
+    .workgrid .container-medium label,
+    .workgrid .container-medium svg.icon,
+    .default-container .container-medium p,
+    .default-container .container-medium label,
+    .default-container .container-medium svg.icon {
+      color: #ffffff; }
+    .workgrid .container-medium.outline, .workgrid .container-medium.bare,
+    .default-container .container-medium.outline,
+    .default-container .container-medium.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #707070; }
+      .workgrid .container-medium.outline p,
+      .workgrid .container-medium.outline label,
+      .workgrid .container-medium.outline svg.icon, .workgrid .container-medium.bare p,
+      .workgrid .container-medium.bare label,
+      .workgrid .container-medium.bare svg.icon,
+      .default-container .container-medium.outline p,
+      .default-container .container-medium.outline label,
+      .default-container .container-medium.outline svg.icon,
+      .default-container .container-medium.bare p,
+      .default-container .container-medium.bare label,
+      .default-container .container-medium.bare svg.icon {
+        color: #707070; }
+    .workgrid .container-medium.bare,
+    .default-container .container-medium.bare {
+      border: 0; }
+  .workgrid .container-light,
+  .default-container .container-light {
+    background-color: #BFBFBF;
+    color: #ffffff; }
+    .workgrid .container-light p,
+    .workgrid .container-light label,
+    .workgrid .container-light svg.icon,
+    .default-container .container-light p,
+    .default-container .container-light label,
+    .default-container .container-light svg.icon {
+      color: #ffffff; }
+    .workgrid .container-light.outline, .workgrid .container-light.bare,
+    .default-container .container-light.outline,
+    .default-container .container-light.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #BFBFBF; }
+      .workgrid .container-light.outline p,
+      .workgrid .container-light.outline label,
+      .workgrid .container-light.outline svg.icon, .workgrid .container-light.bare p,
+      .workgrid .container-light.bare label,
+      .workgrid .container-light.bare svg.icon,
+      .default-container .container-light.outline p,
+      .default-container .container-light.outline label,
+      .default-container .container-light.outline svg.icon,
+      .default-container .container-light.bare p,
+      .default-container .container-light.bare label,
+      .default-container .container-light.bare svg.icon {
+        color: #BFBFBF; }
+    .workgrid .container-light.bare,
+    .default-container .container-light.bare {
+      border: 0; }
+  .workgrid .container-accent,
+  .default-container .container-accent {
+    background-color: #2e89fc;
+    color: #ffffff; }
+    .workgrid .container-accent p,
+    .workgrid .container-accent label,
+    .workgrid .container-accent svg.icon,
+    .default-container .container-accent p,
+    .default-container .container-accent label,
+    .default-container .container-accent svg.icon {
+      color: #ffffff; }
+    .workgrid .container-accent.outline, .workgrid .container-accent.bare,
+    .default-container .container-accent.outline,
+    .default-container .container-accent.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #2e89fc; }
+      .workgrid .container-accent.outline p,
+      .workgrid .container-accent.outline label,
+      .workgrid .container-accent.outline svg.icon, .workgrid .container-accent.bare p,
+      .workgrid .container-accent.bare label,
+      .workgrid .container-accent.bare svg.icon,
+      .default-container .container-accent.outline p,
+      .default-container .container-accent.outline label,
+      .default-container .container-accent.outline svg.icon,
+      .default-container .container-accent.bare p,
+      .default-container .container-accent.bare label,
+      .default-container .container-accent.bare svg.icon {
+        color: #2e89fc; }
+    .workgrid .container-accent.bare,
+    .default-container .container-accent.bare {
+      border: 0; }
+  .workgrid .container-attention,
+  .default-container .container-attention {
+    background-color: #F53F41;
+    color: #ffffff; }
+    .workgrid .container-attention p,
+    .workgrid .container-attention label,
+    .workgrid .container-attention svg.icon,
+    .default-container .container-attention p,
+    .default-container .container-attention label,
+    .default-container .container-attention svg.icon {
+      color: #ffffff; }
+    .workgrid .container-attention.outline, .workgrid .container-attention.bare,
+    .default-container .container-attention.outline,
+    .default-container .container-attention.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #F53F41; }
+      .workgrid .container-attention.outline p,
+      .workgrid .container-attention.outline label,
+      .workgrid .container-attention.outline svg.icon, .workgrid .container-attention.bare p,
+      .workgrid .container-attention.bare label,
+      .workgrid .container-attention.bare svg.icon,
+      .default-container .container-attention.outline p,
+      .default-container .container-attention.outline label,
+      .default-container .container-attention.outline svg.icon,
+      .default-container .container-attention.bare p,
+      .default-container .container-attention.bare label,
+      .default-container .container-attention.bare svg.icon {
+        color: #F53F41; }
+    .workgrid .container-attention.bare,
+    .default-container .container-attention.bare {
+      border: 0; }
+  .workgrid .container-good,
+  .default-container .container-good {
+    background-color: #37D88A;
+    color: #ffffff; }
+    .workgrid .container-good p,
+    .workgrid .container-good label,
+    .workgrid .container-good svg.icon,
+    .default-container .container-good p,
+    .default-container .container-good label,
+    .default-container .container-good svg.icon {
+      color: #ffffff; }
+    .workgrid .container-good.outline, .workgrid .container-good.bare,
+    .default-container .container-good.outline,
+    .default-container .container-good.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #37D88A; }
+      .workgrid .container-good.outline p,
+      .workgrid .container-good.outline label,
+      .workgrid .container-good.outline svg.icon, .workgrid .container-good.bare p,
+      .workgrid .container-good.bare label,
+      .workgrid .container-good.bare svg.icon,
+      .default-container .container-good.outline p,
+      .default-container .container-good.outline label,
+      .default-container .container-good.outline svg.icon,
+      .default-container .container-good.bare p,
+      .default-container .container-good.bare label,
+      .default-container .container-good.bare svg.icon {
+        color: #37D88A; }
+    .workgrid .container-good.bare,
+    .default-container .container-good.bare {
+      border: 0; }
+  .workgrid .container-warning,
+  .default-container .container-warning {
+    background-color: #FFAB00;
+    color: #ffffff; }
+    .workgrid .container-warning p,
+    .workgrid .container-warning label,
+    .workgrid .container-warning svg.icon,
+    .default-container .container-warning p,
+    .default-container .container-warning label,
+    .default-container .container-warning svg.icon {
+      color: #ffffff; }
+    .workgrid .container-warning.outline, .workgrid .container-warning.bare,
+    .default-container .container-warning.outline,
+    .default-container .container-warning.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #FFAB00; }
+      .workgrid .container-warning.outline p,
+      .workgrid .container-warning.outline label,
+      .workgrid .container-warning.outline svg.icon, .workgrid .container-warning.bare p,
+      .workgrid .container-warning.bare label,
+      .workgrid .container-warning.bare svg.icon,
+      .default-container .container-warning.outline p,
+      .default-container .container-warning.outline label,
+      .default-container .container-warning.outline svg.icon,
+      .default-container .container-warning.bare p,
+      .default-container .container-warning.bare label,
+      .default-container .container-warning.bare svg.icon {
+        color: #FFAB00; }
+    .workgrid .container-warning.bare,
+    .default-container .container-warning.bare {
+      border: 0; }
+  .workgrid .container-link,
+  .default-container .container-link {
+    background-color: #0248D5;
+    color: #ffffff; }
+    .workgrid .container-link p,
+    .workgrid .container-link label,
+    .workgrid .container-link svg.icon,
+    .default-container .container-link p,
+    .default-container .container-link label,
+    .default-container .container-link svg.icon {
+      color: #ffffff; }
+    .workgrid .container-link.outline, .workgrid .container-link.bare,
+    .default-container .container-link.outline,
+    .default-container .container-link.bare {
+      background-color: #ffffff;
+      color: #707070;
+      border: 1px solid #0248D5; }
+      .workgrid .container-link.outline p,
+      .workgrid .container-link.outline label,
+      .workgrid .container-link.outline svg.icon, .workgrid .container-link.bare p,
+      .workgrid .container-link.bare label,
+      .workgrid .container-link.bare svg.icon,
+      .default-container .container-link.outline p,
+      .default-container .container-link.outline label,
+      .default-container .container-link.outline svg.icon,
+      .default-container .container-link.bare p,
+      .default-container .container-link.bare label,
+      .default-container .container-link.bare svg.icon {
+        color: #0248D5; }
+    .workgrid .container-link.bare,
+    .default-container .container-link.bare {
+      border: 0; }
+  .workgrid .btn:focus,
+  .default-container .btn:focus {
+    border: 1px solid #0248D5;
+    box-shadow: 0 0 3px 1px #0248D5; }
+  .workgrid .btn.bare,
+  .default-container .btn.bare {
+    background-color: #ffffff;
+    color: #707070;
+    border: 0; }
+  .workgrid .btn.primary,
+  .default-container .btn.primary {
+    background-color: #003399;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.primary svg.icon,
+    .default-container .btn.primary svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.primary.bare,
+    .default-container .btn.primary.bare {
+      background-color: #ffffff;
+      color: #003399; }
+    .workgrid .btn.primary:disabled, .workgrid .btn.primary.disabled,
+    .default-container .btn.primary:disabled,
+    .default-container .btn.primary.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.primary:disabled svg,
+    .workgrid .btn.primary.disabled svg,
+    .default-container .btn.primary:disabled svg,
+    .default-container .btn.primary.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.secondary,
+  .default-container .btn.secondary {
+    background-color: #63768D;
+    color: #ffffff;
+    border: 1px solid #63768D;
+    background-color: #ffffff;
+    color: #63768D; }
+    .workgrid .btn.secondary p,
+    .default-container .btn.secondary p {
+      color: #63768D; }
+    .workgrid .btn.secondary svg.icon,
+    .default-container .btn.secondary svg.icon {
+      color: #63768D; }
+    .workgrid .btn.secondary.bare,
+    .default-container .btn.secondary.bare {
+      background-color: #ffffff;
+      color: #63768D; }
+    .workgrid .btn.secondary:disabled, .workgrid .btn.secondary.disabled,
+    .default-container .btn.secondary:disabled,
+    .default-container .btn.secondary.disabled {
+      color: #BFBFBF;
+      border: 1px solid #BFBFBF; }
+    .workgrid .btn.secondary:disabled svg,
+    .workgrid .btn.secondary.disabled svg,
+    .default-container .btn.secondary:disabled svg,
+    .default-container .btn.secondary.disabled svg {
+      color: #BFBFBF; }
+  .workgrid .btn.dark,
+  .default-container .btn.dark {
+    background-color: #1B1B1B;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.dark svg.icon,
+    .default-container .btn.dark svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.dark.bare,
+    .default-container .btn.dark.bare {
+      background-color: #ffffff;
+      color: #1B1B1B; }
+    .workgrid .btn.dark:disabled, .workgrid .btn.dark.disabled,
+    .default-container .btn.dark:disabled,
+    .default-container .btn.dark.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.dark:disabled svg,
+    .workgrid .btn.dark.disabled svg,
+    .default-container .btn.dark:disabled svg,
+    .default-container .btn.dark.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.medium,
+  .default-container .btn.medium {
+    background-color: #707070;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.medium svg.icon,
+    .default-container .btn.medium svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.medium.bare,
+    .default-container .btn.medium.bare {
+      background-color: #ffffff;
+      color: #707070; }
+    .workgrid .btn.medium:disabled, .workgrid .btn.medium.disabled,
+    .default-container .btn.medium:disabled,
+    .default-container .btn.medium.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.medium:disabled svg,
+    .workgrid .btn.medium.disabled svg,
+    .default-container .btn.medium:disabled svg,
+    .default-container .btn.medium.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.light,
+  .default-container .btn.light {
+    background-color: #BFBFBF;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.light svg.icon,
+    .default-container .btn.light svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.light.bare,
+    .default-container .btn.light.bare {
+      background-color: #ffffff;
+      color: #BFBFBF; }
+    .workgrid .btn.light:disabled, .workgrid .btn.light.disabled,
+    .default-container .btn.light:disabled,
+    .default-container .btn.light.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.light:disabled svg,
+    .workgrid .btn.light.disabled svg,
+    .default-container .btn.light:disabled svg,
+    .default-container .btn.light.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.accent,
+  .default-container .btn.accent {
+    background-color: #2e89fc;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.accent svg.icon,
+    .default-container .btn.accent svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.accent.bare,
+    .default-container .btn.accent.bare {
+      background-color: #ffffff;
+      color: #2e89fc; }
+    .workgrid .btn.accent:disabled, .workgrid .btn.accent.disabled,
+    .default-container .btn.accent:disabled,
+    .default-container .btn.accent.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.accent:disabled svg,
+    .workgrid .btn.accent.disabled svg,
+    .default-container .btn.accent:disabled svg,
+    .default-container .btn.accent.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.attention,
+  .default-container .btn.attention {
+    background-color: #F53F41;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.attention svg.icon,
+    .default-container .btn.attention svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.attention.bare,
+    .default-container .btn.attention.bare {
+      background-color: #ffffff;
+      color: #F53F41; }
+    .workgrid .btn.attention:disabled, .workgrid .btn.attention.disabled,
+    .default-container .btn.attention:disabled,
+    .default-container .btn.attention.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.attention:disabled svg,
+    .workgrid .btn.attention.disabled svg,
+    .default-container .btn.attention:disabled svg,
+    .default-container .btn.attention.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.good,
+  .default-container .btn.good {
+    background-color: #37D88A;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.good svg.icon,
+    .default-container .btn.good svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.good.bare,
+    .default-container .btn.good.bare {
+      background-color: #ffffff;
+      color: #37D88A; }
+    .workgrid .btn.good:disabled, .workgrid .btn.good.disabled,
+    .default-container .btn.good:disabled,
+    .default-container .btn.good.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.good:disabled svg,
+    .workgrid .btn.good.disabled svg,
+    .default-container .btn.good:disabled svg,
+    .default-container .btn.good.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.warning,
+  .default-container .btn.warning {
+    background-color: #FFAB00;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.warning svg.icon,
+    .default-container .btn.warning svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.warning.bare,
+    .default-container .btn.warning.bare {
+      background-color: #ffffff;
+      color: #FFAB00; }
+    .workgrid .btn.warning:disabled, .workgrid .btn.warning.disabled,
+    .default-container .btn.warning:disabled,
+    .default-container .btn.warning.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.warning:disabled svg,
+    .workgrid .btn.warning.disabled svg,
+    .default-container .btn.warning:disabled svg,
+    .default-container .btn.warning.disabled svg {
+      color: #ffffff; }
+  .workgrid .btn.link,
+  .default-container .btn.link {
+    background-color: #0248D5;
+    color: #ffffff;
+    border: 1px solid transparent; }
+    .workgrid .btn.link svg.icon,
+    .default-container .btn.link svg.icon {
+      color: #ffffff; }
+    .workgrid .btn.link.bare,
+    .default-container .btn.link.bare {
+      background-color: #ffffff;
+      color: #0248D5; }
+    .workgrid .btn.link:disabled, .workgrid .btn.link.disabled,
+    .default-container .btn.link:disabled,
+    .default-container .btn.link.disabled {
+      color: #ffffff;
+      background-color: #BFBFBF;
+      border: 1px solid transparent; }
+    .workgrid .btn.link:disabled svg,
+    .workgrid .btn.link.disabled svg,
+    .default-container .btn.link:disabled svg,
+    .default-container .btn.link.disabled svg {
+      color: #ffffff; }
+  .workgrid svg.icon,
+  .default-container svg.icon {
+    color: #707070; }
+    .workgrid svg.icon.primary,
+    .default-container svg.icon.primary {
+      color: #003399; }
+    .workgrid svg.icon.secondary,
+    .default-container svg.icon.secondary {
+      color: #63768D; }
+    .workgrid svg.icon.dark,
+    .default-container svg.icon.dark {
+      color: #1B1B1B; }
+    .workgrid svg.icon.medium,
+    .default-container svg.icon.medium {
+      color: #707070; }
+    .workgrid svg.icon.light,
+    .default-container svg.icon.light {
+      color: #BFBFBF; }
+    .workgrid svg.icon.accent,
+    .default-container svg.icon.accent {
+      color: #2e89fc; }
+    .workgrid svg.icon.attention,
+    .default-container svg.icon.attention {
+      color: #F53F41; }
+    .workgrid svg.icon.good,
+    .default-container svg.icon.good {
+      color: #37D88A; }
+    .workgrid svg.icon.warning,
+    .default-container svg.icon.warning {
+      color: #FFAB00; }
+    .workgrid svg.icon.link,
+    .default-container svg.icon.link {
+      color: #0248D5; }
