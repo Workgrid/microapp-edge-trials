@@ -11,11 +11,7 @@ const Summary = () => {
   const microapp = useRef(new MicroApp())
 
   useEffect(() => {
-    if (window.parent.location !== window.location) {
-      // If we are in an iframe, do the microapp stuff
-      // This is a very basic way to do this since we don't need auth or communication to test this app
-      microapp.current.initialize()
-    }
+    microapp.current.initialize()
   }, [])
 
   const switchTheme = () => {
